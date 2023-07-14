@@ -9,7 +9,7 @@ function AboutUs() {
   return (
     <section className="about">
       <div className="container">
-        <SectionTitle text="ABOUT US" isLink={false} />
+        <h2>ABOUT US</h2>
         <div className="about__desc flex">
           <div className="about__desc-image">
             <img src={about} />
