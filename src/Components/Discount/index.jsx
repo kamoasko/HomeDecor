@@ -15,7 +15,7 @@ function Discount() {
         tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo{" "}
       </p>
       <div className="shop">
-        <Buttons text="SHOP NOW" icon={true} />
+        <Buttons text="SHOP NOW" icon={true} link="/products" />
       </div>
     </section>
   );

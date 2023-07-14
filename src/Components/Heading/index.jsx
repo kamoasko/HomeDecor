@@ -17,7 +17,7 @@ function Heading() {
             blanditiis praesentium voluptatum
           </p>
           <div className="shop">
-            <Buttons text="SHOP NOW" icon={true} />
+            <Buttons text="SHOP NOW" icon={true} link="/products" />
           </div>
         </div>
         <div className="heading__left">

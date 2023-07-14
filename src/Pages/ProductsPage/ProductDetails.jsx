@@ -48,7 +48,7 @@ const ProductDetails = () => {
             <ProductCount />
             <h3>140$</h3>
             <div className="details__btns flex">
-              <Buttons text="BUY NOW" icon={true} />
+              <Buttons text="BUY NOW" icon={true} link="/checkout" />
               <SecondaryButtons text="ADD TO CART" icon={true} />
             </div>
           </div>

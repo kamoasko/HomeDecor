@@ -48,7 +48,11 @@ function AboutUs() {
                   doloribus asperiores repellat.
                 </p>
                 <div className="about__desc-btn">
-                  <SecondaryButtons text="LEARN MORE" icon={false} />
+                  <SecondaryButtons
+                    text="LEARN MORE"
+                    icon={false}
+                    link="/about"
+                  />
                 </div>
               </>
             )}

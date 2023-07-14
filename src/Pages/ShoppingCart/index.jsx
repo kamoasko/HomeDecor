@@ -31,7 +31,7 @@ const ShoppingCart = () => {
                 </li>
               </ul>
               <div className="summary__btn">
-                <Buttons text="CHECKOUT" icon={false} />
+                <Buttons text="CHECKOUT" icon={false} link="/checkout" />
               </div>
             </div>
           </div>

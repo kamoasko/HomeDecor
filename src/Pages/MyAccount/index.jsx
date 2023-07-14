@@ -56,12 +56,12 @@ const MyAccount = () => {
           </div>
           <div className="account__right">
             {/* <AccountForm /> */}
-            <WishlistCard />
-            {/* {useLocation().pathname == "/my-account" ? (
+            {/* <WishlistCard /> */}
+            {useLocation().pathname == "/my-account" ? (
               <AccountForm />
             ) : (
               <WishlistCard />
-            )} */}
+            )}
           </div>
         </section>
       </div>

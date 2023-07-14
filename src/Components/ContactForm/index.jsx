@@ -32,7 +32,7 @@ function ContacForm() {
           placeholder="YOUR MESSAGE"
         ></textarea>
       </div>
-      <Buttons text="LOGIN" icon={false} />
+      <Buttons text="LOGIN" icon={false} link="" />
     </form>
   );
 }

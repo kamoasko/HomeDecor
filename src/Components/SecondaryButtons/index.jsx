@@ -3,9 +3,9 @@ import "./secondary-buttons.css";
 import { Link } from "react-router-dom";
 import { BsHandbag } from "react-icons/bs";
 
-const SecondaryButtons = ({ text, icon }) => {
+const SecondaryButtons = ({ text, icon, link }) => {
   return (
-    <Link className="btn1 flex">
+    <Link className="btn1 flex" to={link}>
       {icon ? (
         <>
           <BsHandbag />

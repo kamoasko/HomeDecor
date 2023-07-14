@@ -30,7 +30,7 @@ const AccountForm = () => {
         </svg>
       </div>
       <div className="account__btn">
-        <Buttons text="SAVE CHANGES" icon={false} />
+        <Buttons text="SAVE CHANGES" icon={false} link="/my-account" />
       </div>
     </form>
   );
