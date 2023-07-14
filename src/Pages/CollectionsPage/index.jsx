@@ -10,7 +10,7 @@ const CollectionsPage = () => {
       <Breadcrumb />
       <section className="collection">
         <div className="container">
-          <SectionTitle text="COLLECTIONS" isLink={false} />
+          <h2>COLLECTIONS</h2>
           <p className="collection__info">
             Et harum quidem rerum facilis est et expedita distinctio. Nam libero
             tempore, cum soluta nobis est eligendi optio cumque nihil impedit
