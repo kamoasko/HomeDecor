@@ -1,0 +1,27 @@
+.popular {
+  margin-top: 12.8rem;
+  padding-bottom: 2.1rem;
+  border-bottom: 0.1rem solid var(--color-rose);
+  position: relative;
+}
+
+.popular::after {
+  content: "";
+  width: 30%;
+  height: 0.4rem;
+  background-color: var(--color-main);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.popular__title {
+  justify-content: space-between;
+}
+
+.popular__content {
+  display: flex;
+  column-gap: 2rem;
+  justify-content: center;
+  margin-top: 5.9rem;
+}

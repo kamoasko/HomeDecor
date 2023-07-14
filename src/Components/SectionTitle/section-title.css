@@ -1,0 +1,13 @@
+.section__title {
+  justify-content: space-between;
+}
+
+.seeall {
+  color: var(--color-main);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.seeall:hover {
+  text-decoration: none;
+}

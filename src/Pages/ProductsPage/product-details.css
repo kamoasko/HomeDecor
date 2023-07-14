@@ -1,0 +1,171 @@
+.details {
+  margin-top: 5rem;
+  display: flex;
+  column-gap: 6rem;
+}
+
+.details__left {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 5.1rem;
+  column-gap: 2.6rem;
+  max-width: 64rem;
+  flex: 1;
+}
+
+.details__left > h2 {
+  display: none;
+}
+
+.details__image {
+  position: relative;
+}
+
+.details__image > img {
+  border-radius: 1rem;
+}
+
+.details__image.active::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.di1 {
+  width: 100%;
+  height: 40.3rem;
+  grid-column: 1/-1;
+  grid-row: 1/3;
+}
+
+.di2 {
+  cursor: pointer;
+  height: 10rem;
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.di3 {
+  cursor: pointer;
+  height: 10rem;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.di4 {
+  cursor: pointer;
+  height: 10rem;
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+
+.details__right {
+  flex: 1;
+}
+
+.details__right-title {
+  font-family: var(--title-font);
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 4.4rem;
+}
+
+.details__right-info {
+  margin-top: 3.6rem;
+  opacity: 0.8;
+}
+
+.details__colors {
+  margin-top: 3rem;
+  font-weight: 600;
+}
+
+.colors {
+  margin-top: 2rem;
+  column-gap: 1.5rem;
+}
+
+.color {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+}
+
+.clr1 {
+  background-color: #539991;
+}
+
+.clr2 {
+  background-color: #555;
+}
+
+.clr3 {
+  background-color: var(--color-main);
+}
+
+.details__right > h3 {
+  margin-top: 3.6rem;
+  color: var(--color-main);
+}
+
+.details__btns {
+  margin-top: 7.1rem;
+  column-gap: 2rem;
+}
+
+.similar {
+  margin-top: 12rem;
+}
+
+.similar__slider {
+  margin-top: 5.9rem;
+}
+
+@media (max-width: 960px) {
+  .details {
+    flex-direction: column;
+    row-gap: 3rem;
+    align-items: center;
+  }
+
+  .details__left > h2 {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    display: block;
+  }
+
+  .di1 {
+    grid-column: 1/-1;
+    grid-row: 2/4;
+  }
+
+  .di2 {
+    cursor: pointer;
+    height: 10rem;
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  .di3 {
+    cursor: pointer;
+    height: 10rem;
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+
+  .di4 {
+    cursor: pointer;
+    height: 10rem;
+    grid-column: 3/4;
+    grid-row: 4/5;
+  }
+
+  .details__right-title {
+    display: none;
+  }
+}

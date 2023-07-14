@@ -1,0 +1,13 @@
+.breadcrumb {
+  margin-top: 7rem;
+  column-gap: 2rem;
+}
+
+.breadcrumb a {
+  color: var(--color-black);
+  opacity: 0.5;
+}
+
+.active > a {
+  opacity: 1;
+}

@@ -1,0 +1,36 @@
+.container2 {
+  max-width: 114rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about__info {
+  margin-top: 13rem;
+  justify-content: space-between;
+}
+
+.about__info-detail {
+  flex-direction: column;
+  row-gap: 2.7rem;
+}
+
+.about__info-detail h2 {
+  color: var(--color-main);
+}
+
+@media (max-width: 1140px) {
+  .container2 {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__info {
+    flex-direction: column;
+    row-gap: 7rem;
+  }
+
+  .about__info-detail > h2 {
+    font-size: 6.4rem;
+  }
+}

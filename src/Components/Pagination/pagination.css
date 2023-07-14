@@ -1,0 +1,15 @@
+.pagination {
+  margin-top: 10rem;
+  column-gap: 1.5rem;
+  justify-content: center;
+}
+
+.pagination > li > a {
+  color: var(--color-black);
+}
+
+@media (max-width: 768px) {
+  .pagination {
+    margin-top: 5rem;
+  }
+}

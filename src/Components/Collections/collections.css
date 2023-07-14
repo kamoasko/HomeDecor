@@ -1,0 +1,19 @@
+.collections {
+  margin-top: 12rem;
+  padding: 8.1rem 0 7.4rem;
+  background-color: var(--color-rose);
+}
+
+.collections__title {
+  justify-content: space-between;
+}
+
+.collections__title a {
+  color: var(--color-main);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.collections__content {
+  height: 26.7rem;
+}

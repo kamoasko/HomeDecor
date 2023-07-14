@@ -1,0 +1,16 @@
+.collection {
+  margin-top: 4.9rem;
+}
+
+.collection__info {
+  margin-top: 4.6rem;
+  max-width: 56.3rem;
+}
+
+.collection__content {
+  margin-top: 4.4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 44.6rem));
+  gap: 2rem;
+  justify-content: center;
+}

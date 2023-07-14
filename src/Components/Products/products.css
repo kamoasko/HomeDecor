@@ -1,0 +1,22 @@
+.products {
+  margin-top: 12.4rem;
+}
+
+.products__title {
+  justify-content: space-between;
+}
+
+.products__title a {
+  color: var(--color-main);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.products__content {
+  margin-top: 5.9rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 32rem));
+  justify-content: center;
+  column-gap: 2rem;
+  row-gap: 4.5rem;
+}

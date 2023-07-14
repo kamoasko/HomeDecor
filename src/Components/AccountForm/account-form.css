@@ -1,0 +1,31 @@
+.account__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  max-width: 44.7rem;
+}
+
+.account__inp {
+  width: 100%;
+  border-radius: 1rem;
+  border: 0.1rem solid var(--color-rose);
+}
+
+.account__inp > input {
+  background-color: transparent;
+  width: 100%;
+  padding: 1.7rem 2rem;
+}
+
+/* .account__inp > input[type="password"] {
+  font-size: 2rem;
+} */
+
+.password {
+  padding-right: 1.7rem;
+}
+
+.account__btn {
+  width: 100%;
+  margin-top: 1rem;
+}

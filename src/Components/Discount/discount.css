@@ -1,0 +1,30 @@
+.discount {
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 14rem;
+  padding: 6.2rem 0;
+  backdrop-filter: blur(7.5px);
+  color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.discount p {
+  max-width: 44.5rem;
+  text-align: center;
+  margin-top: 3.6rem;
+  opacity: 0.8;
+}
+
+.shop {
+  margin-top: 4rem;
+  width: 33rem;
+  border-radius: 1rem;
+}
+
+@media (max-width: 330px) {
+  .shop {
+    width: 100%;
+  }
+}
