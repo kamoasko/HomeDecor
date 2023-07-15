@@ -1,7 +1,6 @@
 import React from "react";
 import "./about.css";
 import about from "../../assets/images/AboutUs/About.png";
-import SectionTitle from "../SectionTitle";
 import { useLocation } from "react-router-dom";
 import SecondaryButtons from "../SecondaryButtons";
 

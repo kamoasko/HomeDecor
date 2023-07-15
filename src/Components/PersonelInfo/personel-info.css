@@ -1,0 +1,44 @@
+.personel__form {
+  column-gap: 2rem;
+  margin-top: 3rem;
+  max-width: 68rem;
+}
+
+.personel__form-side {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  max-width: 33rem;
+  flex: 1;
+}
+
+.personel__inp {
+  width: 100%;
+  border-radius: 1rem;
+  border: 0.1rem solid var(--color-rose);
+  padding: 1.7rem 2rem;
+  color: var(--color-grey);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .personel__form {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+
+  .personel__form-side {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .personel__form {
+    width: 100%;
+  }
+}

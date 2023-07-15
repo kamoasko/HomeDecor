@@ -1,0 +1,82 @@
+.checkout {
+  margin-top: 4.9rem;
+}
+
+.checkout__content {
+  display: flex;
+  column-gap: 13.7rem;
+  margin-top: 6rem;
+}
+
+.checkout__left {
+  flex: 1;
+}
+
+.checkout__right {
+  flex: 1;
+}
+
+.personel__methods {
+  margin-top: 5rem;
+  column-gap: 16rem;
+}
+
+.choose {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  font-weight: 500;
+}
+
+.choose__input {
+  margin-right: 2rem;
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-main);
+}
+
+input[type="radio"] {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radiobutton appearance */
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.3rem;
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 0.2rem solid var(--color-main);
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+/* appearance for checked radiobutton */
+input[type="radio"]:checked {
+  background-color: var(--color-main);
+}
+
+@media (max-width: 1024px) {
+  .checkout__content {
+    column-gap: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout__content {
+    column-gap: 0;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 530px) {
+  .personel__methods.flex {
+    flex-direction: column;
+    row-gap: 4rem;
+    align-items: flex-start;
+  }
+}

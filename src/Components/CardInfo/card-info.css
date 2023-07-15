@@ -1,0 +1,28 @@
+.card__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-top: 3rem;
+  max-width: 33rem;
+}
+
+.card__form > input {
+  width: 100%;
+  border-radius: 1rem;
+  border: 0.1rem solid var(--color-rose);
+  padding: 1.7rem 2rem;
+}
+
+.card__form button {
+  margin-top: 5rem;
+}
+
+/* input[type='date'] {
+  
+} */
+
+@media (max-width: 768px) {
+  .card__form {
+    width: 100%;
+  }
+}
