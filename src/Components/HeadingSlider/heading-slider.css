@@ -1,0 +1,23 @@
+.beginning__slider {
+  margin: 6rem -2rem 0;
+}
+
+.beginning__slider .slick-slide {
+  margin: 0 2rem;
+}
+
+.buttons {
+  margin-top: 6rem;
+  justify-content: flex-end;
+  column-gap: 2rem;
+}
+
+.button {
+  justify-content: center;
+  width: 3.1rem;
+  height: 3.1rem;
+  border-radius: 50%;
+  background-color: var(--color-main);
+  color: #fff;
+  font-size: 1.8rem;
+}

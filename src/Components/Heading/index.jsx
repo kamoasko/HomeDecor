@@ -1,7 +1,7 @@
 import React from "react";
 import "./heading.css";
 import heading from "../../assets/images/Header/Heading.png";
-import SliderButtons from "../SliderButtons";
+import HeadingSlider from "../HeadingSlider";
 import Buttons from "../Buttons";
 
 function Heading() {
@@ -20,15 +20,14 @@ function Heading() {
             <Buttons text="SHOP NOW" icon={true} link="/products" />
           </div>
         </div>
-        <div className="heading__left">
+        <div className="heading__right">
           <div className="heading__image">
             <img src={heading} />
           </div>
           <div className="blur"></div>
         </div>
       </div>
-      <div className="beginning__categories"></div>
-      <SliderButtons />
+      <HeadingSlider />
     </section>
   );
 }

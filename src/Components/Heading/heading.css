@@ -48,19 +48,7 @@
   color: var(--color-bg);
 }
 
-.shop:hover,
-.shop:active {
-  background-color: var(--color-bg);
-  color: var(--color-main);
-  outline: 0.1rem solid var(--color-main);
-  transition: 0.3s all ease;
-}
-
-.heading__shop .shop.btn {
-  width: 100%;
-}
-
-.heading__left {
+.heading__right {
   flex: 1;
   position: relative;
   max-width: 91.3rem;
@@ -85,11 +73,6 @@
   backdrop-filter: blur(7.5px);
   left: 0;
   top: 0;
-}
-
-.beginning__categories {
-  height: 19.3rem;
-  margin-top: 6rem;
 }
 
 @media (max-width: 1380px) {

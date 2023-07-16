@@ -5,10 +5,16 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 function SliderButtons() {
   return (
     <div className="buttons flex">
-      <button className="button flex">
+      <button
+        onClick={() => slider?.current?.slickPrev()}
+        className="prev button flex"
+      >
         <FaArrowLeft />
       </button>
-      <button className="button flex">
+      <button
+        onClick={() => slider?.current?.slickNext()}
+        className="next button flex"
+      >
         <FaArrowRight />
       </button>
     </div>
