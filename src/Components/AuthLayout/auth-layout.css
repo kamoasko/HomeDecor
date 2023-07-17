@@ -11,6 +11,61 @@
   flex: 1;
 }
 
+.authentication {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.auth__link {
+  margin-top: 3.8rem;
+  column-gap: 2.5rem;
+  color: var(--color-main);
+  font-weight: 600;
+}
+
+.auth__main {
+  margin-top: 19rem;
+}
+
+.auth__form {
+  max-width: 44.7rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.auth__form input {
+  border-radius: 1rem;
+  border: 0.1rem solid var(--color-rose);
+  width: 100%;
+  padding: 1.7rem 2rem;
+}
+
+.auth__form > input::placeholder {
+  font-weight: 500;
+}
+
+.auth__form-link {
+  color: var(--color-main);
+  font-size: 1.4rem;
+}
+
+.auth__last {
+  margin-top: 7rem;
+  column-gap: 2rem;
+  font-weight: 500;
+}
+
+.auth__last > a {
+  color: var(--color-main);
+  text-decoration: underline;
+}
+
+.auth__main .auth__last {
+  margin-top: 0;
+}
+
 @media (max-width: 960px) {
   .auth {
     flex-direction: column;

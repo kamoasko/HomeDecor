@@ -16,7 +16,11 @@ import Checkout from "./Pages/Checkout";
 import AuthLayout from "./Components/AuthLayout";
 import AccountForm from "./Components/AccountForm";
 import WishlistCard from "./Components/WishlistCard";
-import Login from "./Components/Login";
+import Login from "./Components/AuthLayout/Login";
+import Password from "./Components/AuthLayout/Password";
+import Verification from "./Components/AuthLayout/verification";
+import NewPassword from "./Components/AuthLayout/NewPassword";
+import Register from "./Components/AuthLayout/Register";
 
 function App() {
   useEffect(() => {
@@ -53,9 +57,10 @@ function App() {
 
         <Route path="/auth" element={<AuthLayout />}>
           <Route path="login" element={<Login />} />
-          <Route path="verification" />
-          <Route path="password" />
-          <Route path="register" />
+          <Route path="password" element={<Password />} />
+          <Route path="verification" element={<Verification />} />
+          <Route path="newpassword" element={<NewPassword />} />
+          <Route path="register" element={<Register />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

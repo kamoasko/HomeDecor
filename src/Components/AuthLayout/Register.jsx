@@ -1,32 +1,32 @@
 import React from "react";
-import "./login.css";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Buttons from "../Buttons";
 
-const Login = () => {
+const Register = () => {
   return (
-    <div className="login">
-      <div className="login__link flex">
+    <div className="authentication">
+      <div className="auth__link flex">
         <Link to="/" className="button flex">
           <FaArrowLeft />
         </Link>
         HOME
       </div>
-      <div className="login__main">
-        <h3>LOG IN</h3>
-        <form action="" className="login__form">
+      <div className="auth__main">
+        <h3>REGISTER</h3>
+        <form action="" className="auth__form">
+          <input type="text" name="" placeholder="NAME, SURNAME" />
           <input type="email" name="" placeholder="E-MAIL ADRESS" />
           <input type="password" name="" placeholder="PASSWORD" />
-          <Link className="login__form-link">Forgot password?</Link>
+          <input type="password" name="" placeholder="REPEAT PASSWORD" />
           <Buttons text="LOG IN" link="/account/personel" />
         </form>
       </div>
-      <div className="login__last flex">
-        Don’t have an account? <Link>Register</Link>
+      <div className="auth__last flex">
+        Already have an account? <Link to="/auth/login">Log in</Link>
       </div>
     </div>
   );
 };
 
-export default Login;
+export default Register;
