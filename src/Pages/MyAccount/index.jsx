@@ -3,7 +3,7 @@ import "./my-account.css";
 import Breadcrumb from "../../Components/Breadcrumb";
 import { FaUser } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import AccountForm from "../../Components/AccountForm";
 import WishlistCard from "../../Components/WishlistCard";
 
@@ -17,12 +17,18 @@ const MyAccount = () => {
             <p className="my-account">MY ACCOUNT</p>
             <ul className="account__items">
               <li>
-                <NavLink className="account__items-list flex">
+                <NavLink
+                  to="/account/personel"
+                  className="account__items-list flex"
+                >
                   <FaUser /> PERSONAL INFORMATION
                 </NavLink>
               </li>
               <li>
-                <NavLink className="account__items-list flex">
+                <NavLink
+                  to="/account/wishlist"
+                  className="account__items-list flex"
+                >
                   <AiOutlineHeart /> WISHLIST
                 </NavLink>
               </li>
@@ -55,13 +61,7 @@ const MyAccount = () => {
             </ul>
           </div>
           <div className="account__right">
-            {/* <AccountForm /> */}
-            {/* <WishlistCard /> */}
-            {useLocation().pathname == "/my-account" ? (
-              <AccountForm />
-            ) : (
-              <WishlistCard />
-            )}
+            <Outlet />
           </div>
         </section>
       </div>

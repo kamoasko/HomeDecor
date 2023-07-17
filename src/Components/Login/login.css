@@ -1,0 +1,50 @@
+.login {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.login__link {
+  margin-top: 3.8rem;
+  column-gap: 2.5rem;
+  color: var(--color-main);
+  font-weight: 600;
+}
+
+.login__main {
+  margin-top: 19rem;
+}
+
+.login__form {
+  max-width: 44.7rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.login__form input {
+  border-radius: 1rem;
+  border: 0.1rem solid var(--color-rose);
+  width: 100%;
+  padding: 1.7rem 2rem;
+}
+
+.login__form > input::placeholder {
+  font-weight: 500;
+}
+
+.login__form-link {
+  color: var(--color-main);
+  font-size: 1.4rem;
+}
+
+.login__last {
+  margin-top: 7rem;
+  column-gap: 2rem;
+  font-weight: 500;
+}
+
+.login__last > a {
+  color: var(--color-main);
+  text-decoration: underline;
+}

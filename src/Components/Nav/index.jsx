@@ -31,7 +31,7 @@ function Nav() {
           <Link to="/shopping-cart">
             <BsCart2 />
           </Link>
-          <Link to="/my-account">
+          <Link to="/auth/login">
             <FaRegUser />
           </Link>
         </div>

@@ -4,7 +4,7 @@ import Breadcrumb from "../../Components/Breadcrumb";
 import { FaChevronDown, FaSortAmountDown } from "react-icons/fa";
 import ProductCard from "../../Components/ProductCard";
 import Pagination from "../../Components/Pagination";
-// import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const ProductsPage = () => {
   return (
@@ -209,7 +209,6 @@ const ProductsPage = () => {
           <Pagination />
         </div>
       </section>
-      {/* {<Outlet />} */}
     </>
   );
 };

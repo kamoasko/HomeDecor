@@ -8,14 +8,19 @@
 } */
 
 /* the slides */
-.slick-slide {
+/* .slick-slide {
   margin: 0 2rem;
+} */
+
+.slick-track {
+  display: flex !important;
+  gap: 2rem;
 }
 
 /* the parent */
-.slick-list {
+/* .slick-list {
   margin: 0 -2rem;
-}
+} */
 
 .beginning__slider .card {
   height: 19.3rem;

@@ -5,11 +5,11 @@ import "./not-found.css";
 const NotFound = () => {
   const url = useNavigate();
 
-  useEffect(() => {
-    setTimeout(() => {
-      url("/");
-    }, 3000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     url("/");
+  //   }, 3000);
+  // }, []);
 
   return (
     <div className="not_found">

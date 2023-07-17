@@ -7,7 +7,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 function ProductCard() {
   return (
     <Link
-      to="grayson-premium-grey-wash-nest-of-tables"
+      to="/products/grayson-premium-grey-wash-nest-of-tables"
       className="products__card"
     >
       <div className="products__card-image">

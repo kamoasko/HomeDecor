@@ -1,0 +1,24 @@
+.auth {
+  display: flex;
+}
+
+.auth__image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 102.4rem;
+  max-width: 82.7rem;
+  flex: 1;
+}
+
+@media (max-width: 960px) {
+  .auth {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .auth__image {
+    height: 100vh;
+  }
+}
