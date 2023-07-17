@@ -20,8 +20,10 @@
 }
 
 .popular__content {
-  display: flex;
-  column-gap: 2rem;
-  justify-content: center;
   margin-top: 5.9rem;
+}
+
+.popular__content .product__card {
+  display: block;
+  max-width: 33rem;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import "./heading.css";
 import heading from "../../assets/images/Header/Heading.png";
-import HeadingSlider from "../HeadingSlider";
+import HeadingSlider from "./HeadingSlider";
 import Buttons from "../Buttons";
 
 function Heading() {

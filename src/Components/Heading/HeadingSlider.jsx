@@ -7,49 +7,6 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import CollectionsCard from "../CollectionsCard";
 
 const HeadingSlider = () => {
-  // const sliderRef = useRef(null);
-  // const settings = {
-  //   dots: false,
-  //   infinite: true,
-  //   speed: 500,
-  //   arrows: false,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 3,
-  //   autoplay: true,
-  //   autoplaySpeed: 3000,
-  // };
-  // const handlePrev = () => {
-  //   sliderRef.current.slickPrev();
-  // };
-  // const handleNext = () => {
-  //   sliderRef.current.slickNext();
-  // };
-  // return (
-  //   <>
-  //     <div className="beginning__slider">
-  //       <Slider ref={sliderRef} {...settings}>
-  //         <CollectionsCard />
-  //         <CollectionsCard />
-  //         <CollectionsCard />
-  //         <CollectionsCard />
-  //         <CollectionsCard />
-  //         <CollectionsCard />
-  //         <CollectionsCard />
-  //         <CollectionsCard />
-  //         <CollectionsCard />
-  //       </Slider>
-  //     </div>
-  //     <div className="buttons flex">
-  //       <button onClick={handlePrev} className="prev button flex">
-  //         <FaArrowLeft />
-  //       </button>
-  //       <button onClick={handleNext} className="next button flex">
-  //         <FaArrowRight />
-  //       </button>
-  //     </div>
-  //   </>
-  // );
-
   const sliderRef = useRef(null);
 
   const settings = {
@@ -59,6 +16,30 @@ const HeadingSlider = () => {
     arrows: false,
     slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   const handlePrev = () => {
