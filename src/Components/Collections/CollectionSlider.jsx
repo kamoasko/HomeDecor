@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
-import ProductCard from "../ProductCard";
+import CollectionsCard from "../CollectionsCard";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-const MostPopularSlider = () => {
+const CollectionSlider = () => {
   const sliderRef = useRef(null);
 
   const settings = {
@@ -11,29 +11,23 @@ const MostPopularSlider = () => {
     infinite: true,
     speed: 500,
     arrows: false,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          initialSlide: 2,
+          dots: true,
         },
       },
     ],
@@ -48,14 +42,14 @@ const MostPopularSlider = () => {
   };
 
   return (
-    <div className="popular__content">
+    <div className="collections__content">
       <Slider ref={sliderRef} {...settings}>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <CollectionsCard />
+        <CollectionsCard />
+        <CollectionsCard />
+        <CollectionsCard />
+        <CollectionsCard />
+        <CollectionsCard />
       </Slider>
       <div className="buttons flex">
         <div onClick={handlePrev} className="button flex">
@@ -69,4 +63,4 @@ const MostPopularSlider = () => {
   );
 };
 
-export default MostPopularSlider;
+export default CollectionSlider;

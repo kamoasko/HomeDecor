@@ -48,10 +48,7 @@ function App() {
           <Route path="shopping-cart" element={<ShoppingCart />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="products" element={<ProductsPage />}>
-            <Route
-              path="grayson-premium-grey-wash-nest-of-tables"
-              element={<ProductDetails />}
-            />
+            <Route path=":id" element={<ProductDetails />} />
           </Route>
         </Route>
 

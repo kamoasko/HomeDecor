@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
-import "./heading-slider.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -25,11 +24,12 @@ const HeadingSlider = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          dots: true,
         },
       },
       {
