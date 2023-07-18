@@ -1,17 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./about.css";
-import about from "../../assets/images/AboutUs/About.png";
+// import about from "../../assets/images/AboutUs/About.png";
 import { useLocation } from "react-router-dom";
 import SecondaryButtons from "../SecondaryButtons";
 
 function AboutUs() {
+  const [about, setAbout] = useState({});
+
+  const getAbout = async () => {
+    const res = await fetch("http://localhost:5000/about");
+    if (res.ok) {
+      const aboutImage = await res.json();
+      setAbout(() => aboutImage);
+    }
+  };
+
+  useEffect(() => {
+    getAbout();
+  }, []);
+
   return (
     <section className="about">
       <div className="container">
         <h2>ABOUT US</h2>
         <div className="about__desc flex">
           <div className="about__desc-image">
-            <img src={about} />
+            {about && <img src={about.image} />}
           </div>
           <div className="about__desc-content">
             {useLocation().pathname == "/about" ? (
