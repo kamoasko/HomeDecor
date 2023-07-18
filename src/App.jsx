@@ -13,7 +13,7 @@ import ProductDetails from "./Pages/ProductsPage/ProductDetails";
 import MyAccount from "./Pages/MyAccount";
 import ShoppingCart from "./Pages/ShoppingCart";
 import Checkout from "./Pages/Checkout";
-import AuthLayout from "./Components/AuthLayout";
+import AuthLayout from "./Pages/Authentication";
 import AccountForm from "./Components/AccountForm";
 import WishlistCard from "./Components/WishlistCard";
 import Login from "./Components/AuthLayout/Login";

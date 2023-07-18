@@ -8,6 +8,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .discount p {
@@ -15,12 +16,28 @@
   text-align: center;
   margin-top: 3.6rem;
   opacity: 0.8;
+  z-index: 999;
+}
+
+.discount h2 {
+  z-index: 999;
 }
 
 .shop {
   margin-top: 4rem;
   width: 33rem;
   border-radius: 1rem;
+  z-index: 999;
+}
+
+.discount__blur {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(7.5px);
 }
 
 @media (max-width: 330px) {

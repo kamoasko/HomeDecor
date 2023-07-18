@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./discount.css";
-// import disc from "../../assets/images/Discount/Discount.png";
 import Buttons from "../Buttons";
 
 function Discount() {
@@ -32,7 +31,7 @@ function Discount() {
   }
 
   if (error) {
-    return <h1>{error}</h1>;
+    return <h3>{error}</h3>;
   }
 
   return (
@@ -42,6 +41,7 @@ function Discount() {
       <div className="shop">
         <Buttons text="SHOP NOW" icon={true} link="/products" />
       </div>
+      <div className="discount__blur"></div>
     </section>
   );
 }

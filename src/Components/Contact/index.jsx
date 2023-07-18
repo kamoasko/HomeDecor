@@ -2,10 +2,39 @@ import React from "react";
 import "./contact.css";
 import SectionTitle from "../SectionTitle";
 import ContacForm from "../ContactForm";
-import contact from "../../assets/images/Contact/contact.png";
-import Modal from "../Modals";
+// import Modal from "../Modals";
+import { useState, useEffect } from "react";
 
 function Contact() {
+  const [contact, setContact] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  const getContact = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/contact");
+      if (res.ok) {
+        const contactImg = await res.json();
+        setContact(() => contactImg);
+      }
+    } catch (e) {
+      setError(() => e.message);
+    }
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    getContact().then();
+  }, []);
+
+  if (loading) {
+    return <h3>LOADING......</h3>;
+  }
+
+  if (error) {
+    return <h3>{error}</h3>;
+  }
+
   return (
     <section className="contact">
       <div className="container">
@@ -15,7 +44,7 @@ function Contact() {
             <ContacForm />
           </div>
           <div className="contact__image">
-            <img src={contact} alt="" />
+            <img src={contact && contact.image} alt="" />
           </div>
         </div>
       </div>

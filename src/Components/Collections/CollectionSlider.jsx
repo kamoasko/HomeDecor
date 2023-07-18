@@ -45,11 +45,6 @@ const CollectionSlider = () => {
     <div className="collections__content">
       <Slider ref={sliderRef} {...settings}>
         <CollectionsCard />
-        <CollectionsCard />
-        <CollectionsCard />
-        <CollectionsCard />
-        <CollectionsCard />
-        <CollectionsCard />
       </Slider>
       <div className="buttons flex">
         <div onClick={handlePrev} className="button flex">
