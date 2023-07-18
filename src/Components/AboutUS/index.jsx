@@ -1,23 +1,37 @@
 import React, { useEffect, useState } from "react";
 import "./about.css";
-// import about from "../../assets/images/AboutUs/About.png";
 import { useLocation } from "react-router-dom";
 import SecondaryButtons from "../SecondaryButtons";
 
 function AboutUs() {
   const [about, setAbout] = useState({});
-
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const location = useLocation();
   const getAbout = async () => {
-    const res = await fetch("http://localhost:5000/about");
-    if (res.ok) {
-      const aboutImage = await res.json();
-      setAbout(() => aboutImage);
+    try {
+      const res = await fetch("http://localhost:5000/about");
+      if (res.ok) {
+        const aboutImage = await res.json();
+        setAbout(() => aboutImage);
+      }
+    } catch (e) {
+      setError(() => e.message);
     }
+    setLoading(false);
   };
 
   useEffect(() => {
-    getAbout();
+    getAbout().then();
   }, []);
+
+  if (loading) {
+    return <h1>LOADING......</h1>;
+  }
+
+  if (error) {
+    return <h1>{error}</h1>;
+  }
 
   return (
     <section className="about">
@@ -28,38 +42,11 @@ function AboutUs() {
             {about && <img src={about.image} />}
           </div>
           <div className="about__desc-content">
-            {useLocation().pathname == "/about" ? (
-              <p>
-                Et harum quidem rerum facilis est et expedita distinctio. Nam
-                libero tempore, cum soluta nobis est eligendi optio cumque nihil
-                impedit quo minus id quod maxime placeat facere possimus, omnis
-                voluptas assumenda est, omnis dolor repellendus. <br />
-                <br /> Temporibus autem quibusdam et aut officiis debitis aut
-                rerum necessitatibus saepe eveniet ut et voluptates repudiandae
-                sint et molestiae non recusandae. Itaque earum rerum hic tenetur
-                a sapiente delectus, ut aut reiciendis voluptatibus maiores
-                alias consequatur aut perferendis doloribus asperiores repellat.
-                <br />
-                <br /> Itaque earum rerum hic tenetur a sapiente delectus, ut
-                aut reiciendis voluptatibus maiores alias consequatur aut
-                perferendis doloribus asperiores repellat et voluptates
-                repudiandae sint et molestiae non
-              </p>
+            {location.pathname == "/about" ? (
+              <p>{about.desc}</p>
             ) : (
               <>
-                <p>
-                  Et harum quidem rerum facilis est et expedita distinctio. Nam
-                  libero tempore, cum soluta nobis est eligendi optio cumque
-                  nihil impedit quo minus id quod maxime placeat facere
-                  possimus, omnis voluptas assumenda est, omnis dolor
-                  repellendus. <br />
-                  <br /> Temporibus autem quibusdam et aut officiis debitis aut
-                  rerum necessitatibus saepe eveniet ut et voluptates
-                  repudiandae sint et molestiae non recusandae. Itaque earum
-                  rerum hic tenetur a sapiente delectus, ut aut reiciendis
-                  voluptatibus maiores alias consequatur aut perferendis
-                  doloribus asperiores repellat.
-                </p>
+                <p>{about.desc}</p>
                 <div className="about__desc-btn">
                   <SecondaryButtons
                     text="LEARN MORE"

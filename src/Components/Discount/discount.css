@@ -3,7 +3,7 @@
   justify-content: center;
   margin-top: 14rem;
   padding: 6.2rem 0;
-  backdrop-filter: blur(7.5px);
+  background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
   background-position: center;
   background-repeat: no-repeat;

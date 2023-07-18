@@ -1,19 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./discount.css";
-import { FaShoppingBag } from "react-icons/fa";
-import discount from "../../assets/images/Discount/Discount.png";
+// import disc from "../../assets/images/Discount/Discount.png";
 import Buttons from "../Buttons";
 
-const disc = { backgroundImage: `url(${discount})` };
-
 function Discount() {
+  const [discount, setDiscount] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  const getDiscount = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/discount");
+      if (res.ok) {
+        const discountImage = await res.json();
+        setDiscount(() => discountImage);
+      }
+    } catch (e) {
+      setError(() => e.message);
+    }
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    getDiscount().then();
+  }, []);
+
+  const disc = { backgroundImage: `url(${discount.image})` };
+
+  if (loading) {
+    return <h1>LOADING......</h1>;
+  }
+
+  if (error) {
+    return <h1>{error}</h1>;
+  }
+
   return (
     <section style={disc} className="discount flex">
-      <h2>20% DISCOUNT</h2>
-      <p>
-        Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-        tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo{" "}
-      </p>
+      <h2>{discount.sale} DISCOUNT</h2>
+      <p>{discount.desc}</p>
       <div className="shop">
         <Buttons text="SHOP NOW" icon={true} link="/products" />
       </div>

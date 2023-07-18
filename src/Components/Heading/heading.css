@@ -25,6 +25,7 @@
 }
 
 .heading__title h1 {
+  max-width: 83rem;
   z-index: 999;
   position: absolute;
   top: 15%;
