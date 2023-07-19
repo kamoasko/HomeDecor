@@ -1,44 +1,71 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./product-details.css";
 import Breadcrumb from "../../Components/Breadcrumb";
-import productDetail from "../../assets/images/Productdetails/productdetails1.png";
 import Buttons from "../../Components/Buttons";
 import SecondaryButtons from "../../Components/SecondaryButtons";
 import SectionTitle from "../../Components/SectionTitle";
 import ProductCard from "../../Components/ProductCard";
 import SliderButtons from "../../Components/SliderButtons";
 import ProductCount from "../../Components/ProductCount";
+import { Outlet, useParams } from "react-router-dom";
 
 const ProductDetails = () => {
+  const { id } = useParams();
+  const [products, setProducts] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  const getProducts = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/products/" + id);
+      if (res.ok) {
+        const data = await res.json();
+        setProducts(() => data);
+        setLoading(false);
+      } else {
+        setLoading(false);
+        throw Error("Network error!!!");
+      }
+    } catch (e) {
+      setError(() => e.message);
+    }
+  };
+
+  useEffect(() => {
+    getProducts();
+  }, []);
+
+  if (loading) {
+    return <h1>LOADING......</h1>;
+  }
+
+  if (error) {
+    return <h3>{error}</h3>;
+  }
+
   return (
     <>
       <Breadcrumb />
       <div className="container">
         <section className="details">
           <div className="details__left">
-            <h2>GRAYSON PREMIUM GREY WASH NEST OF TABLES</h2>
+            <h2>{products.title}</h2>
             <div className="details__image di1">
-              <img src={productDetail} />
+              <img src={products.image} />
             </div>
             <div className="details__image active di2">
-              <img src={productDetail} />
+              <img src={products.image} />
             </div>
             <div className="details__image di3">
-              <img src={productDetail} />
+              <img src={products.image} />
             </div>
             <div className="details__image di4">
-              <img src={productDetail} />
+              <img src={products.image} />
             </div>
           </div>
           <div className="details__right">
-            <p className="details__right-title">
-              GRAYSON PREMIUM GREY WASH NEST OF TABLES
-            </p>
-            <p className="details__right-info">
-              Temporibus autem quibusdam et aut officiis debitis aut rerum
-              necessitatibus saepe eveniet ut et voluptates repudiandae sint et
-              molestiae non recusandae.{" "}
-            </p>
+            <p className="details__right-title">{products.title}</p>
+            <p className="details__right-info">{products.desc}</p>
             <div className="details__colors">COLORS</div>
             <div className="colors flex">
               <div className="color clr1"></div>
@@ -46,7 +73,7 @@ const ProductDetails = () => {
               <div className="color clr3"></div>
             </div>
             <ProductCount />
-            <h3>140$</h3>
+            <h3>{products.price}</h3>
             <div className="details__btns flex">
               <Buttons text="BUY NOW" icon={true} link="/checkout" />
               <SecondaryButtons text="ADD TO CART" icon={true} />
@@ -61,6 +88,7 @@ const ProductDetails = () => {
           <SliderButtons />
         </section>
       </div>
+      <Outlet />
     </>
   );
 };

@@ -3,9 +3,9 @@ import "./product-card.css";
 import { Link } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
 
-function ProductCard({ productImg, productTitle, price }) {
+function ProductCard({ productImg, productTitle, price, id }) {
   return (
-    <Link to="/products/:id" className="products__card">
+    <Link to={`/products/${id}`} className="products__card">
       <div className="products__card-image">
         <img src={productImg} />
       </div>
