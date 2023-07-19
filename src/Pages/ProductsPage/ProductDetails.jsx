@@ -8,6 +8,7 @@ import ProductCard from "../../Components/ProductCard";
 import SliderButtons from "../../Components/SliderButtons";
 import ProductCount from "../../Components/ProductCount";
 import { Outlet, useParams } from "react-router-dom";
+import SimilarSlider from "./SimilarSlider";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -82,10 +83,7 @@ const ProductDetails = () => {
         </section>
         <section className="similar">
           <SectionTitle text="SIMILAR PRODUCTS" isLink={false} />
-          <div className="similar__slider">
-            <ProductCard />
-          </div>
-          <SliderButtons />
+          <SimilarSlider />
         </section>
       </div>
       <Outlet />

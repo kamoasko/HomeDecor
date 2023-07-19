@@ -4,9 +4,8 @@ import Breadcrumb from "../../Components/Breadcrumb";
 import { FaChevronDown, FaSortAmountDown } from "react-icons/fa";
 import ProductCard from "../../Components/ProductCard";
 import Pagination from "../../Components/Pagination";
-import { Outlet } from "react-router-dom";
 
-const ProductsPage = () => {
+function ProductsPage() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -240,6 +239,6 @@ const ProductsPage = () => {
       </section>
     </>
   );
-};
+}
 
 export default ProductsPage;
