@@ -2,73 +2,481 @@
   "products": [
     {
       "id": 1,
+      "collectionId": 1,
+      "categoriesId": 1,
       "image": "https://s3-alpha-sig.figma.com/img/ed65/0672/8605e77828c2dca2b6da5d4d87f66186?Expires=1690761600&Signature=N~Tf2ao6VebaAGPAfSteSJYqM0bRrklGDZCtHUffE93YNB8NV6O2nXlC~5aS3O2Sm2ifWgiPxk4iFKdrWjB-CVrXI9SoycNUuR2tzt9rV0lgn3oSqXByTDGIHX6lzITkgsYzZSoVMWJs41OLFiYxdgNq7osUCe~Mp6NhahphGh92peoAcBeAs~-~OrJW~c8P9hxa5KiQLsPLGYIzpqM~W1SAOvjI5jQmNVvBYTDOOL8pBMjFRIS2RB5z5kv05gQ-S3YhBJXwjkoDHsGRr-LThQhy-MeJvI6xgg~JwUm8gT0Mk-xZ~Txjv4pwTvgTiy9NJnVr9nhGirGEYdWeTsppgg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "price": "140$"
     },
     {
       "id": 2,
+      "collectionId": 2,
+      "categoriesId": 2,
       "image": "https://s3-alpha-sig.figma.com/img/5a97/55b2/be5d65f3963d2bc282606dc6acd7fe2d?Expires=1690761600&Signature=BJaXxarq3FAt9ctQe2-t0LiimWeCxUjHnQcHgv-kG2c3Y0L9fHK82WN6zFp6sQf0xpNXvOhgIvDzlBjmpHAWNND4lPqnBI8Pk77~0zggUvHh9CeWbsJY3Ae2UUCasCkuX7jN2ieYyjSJFB-qOLsjva3tGjEb3EhDe~S1XoDpHPKJ8rVT4OCSWJqE~eHyD7Hh5shwcICYJ1jFz6j8J5QguyrB6YcdjxaGgITuxSnG1fxjblSu0LB6b86SHcEZ-hCMPUNUVpMH7T4mZUVmzsKFKeXVp0GBhwMK5Me6hyzUSkwIQfa5oPHQG1t-AXEUgqr~m1ziS~sxIRDXGOnQYsetXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "price": "140$"
     },
     {
       "id": 3,
+      "collectionId": 3,
+      "categoriesId": 3,
       "image": "https://s3-alpha-sig.figma.com/img/eafa/bf40/6cb1d294ca686d29b62862c6f7bde43e?Expires=1690761600&Signature=cqYJ4RibWMxtthl0sAYc8PeIQny~VvlfppGWP33WBsI1IMFzuPkYpG~q9ZX2DAS8Bz1dNpfaEbgIPcPuZCXxJM108Hxb-KT7PCD0hoCTKaHa5jmac3nLM~eXWjJpoZYVrAj0iQfBigll2O2kkgwDHBUTo8KDABuMxYVitaPWoRKi0L07kqD7ruo-WlAW~x1AhOlwKWaX0B2vjFsHmm4nVYaw8BoJYROOGamG0dGQePl1A95HBey9-F6xxX6OtJTnqeO7-CBtBQDNOodCIBixnTjOiuWzFIGL4kKBfLAA8HR7GlrpaYunjdemMvTUAylbMPzYdM6AoIliV52c2yIEPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "price": "140$"
     },
     {
       "id": 4,
+      "collectionId": 4,
+      "categoriesId": 4,
       "image": "https://s3-alpha-sig.figma.com/img/18db/ff63/f1f0dd3eb19c837df412907407129597?Expires=1690761600&Signature=YxeM3Kutudmy6N5TIJE6WayMHwNMetLCmIeHRWg4GHuvpeuricnPToyL6Y3sFtpxY-9kQLtkrkw1X7KvhEecqLAPIXsN9FtKVd6kmsyUmZD~pLbif1sJAa~MFuVptxnOorB4v-16HcEOSwsohwG3tRGJ-QdH52CqKNkI75mLnYZi3Ze70F9ppvvn3m-ICzxpzp-mw9X5iK8yr-v3-LQnUI1vMnG7NdbSZbLx~5Q-6owc9s173a8iyIasF5ADRS33b2SOWGtBelxQ4gduDil5KkSJfzdkGO9ohuSO4tG-~6L-xeO0RuD6Std2yLvKL4gZvMBrvCbM0tWfvY1AkHxfnQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "price": "140$"
     },
     {
       "id": 5,
+      "collectionId": 5,
+      "categoriesId": 5,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dee2eb1391d11c1e5ecc902a0c6592f4c16d3abb",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "price": "140$"
     },
     {
       "id": 6,
+      "collectionId": 6,
+      "categoriesId": 6,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a74de1b66730f5b5363196a16ffb8a91a269bf7e",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "price": "140$"
     },
     {
       "id": 7,
+      "collectionId": 7,
+      "categoriesId": 1,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4d980a2b4cf40a0ed69c10e4829a9d775c00304d",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "price": "140$"
     },
     {
       "id": 8,
+      "collectionId": 8,
+      "categoriesId": 1,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "price": "140$"
     },
     {
       "id": 9,
+      "collectionId": 9,
+      "categoriesId": 4,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "price": "140$"
     },
     {
       "id": 10,
+      "collectionId": 3,
+      "categoriesId": 6,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "price": "140$"
     },
     {
       "id": 11,
+      "collectionId": 5,
+      "categoriesId": 3,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "price": "140$"
     },
     {
       "id": 12,
+      "collectionId": 1,
+      "categoriesId": 4,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4ab5417ccf834a93aa9a0b8c0e6a774872bff0b8",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 13,
+      "collectionId": 5,
+      "categoriesId": 2,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dee2eb1391d11c1e5ecc902a0c6592f4c16d3abb",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 14,
+      "collectionId": 6,
+      "categoriesId": 5,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a74de1b66730f5b5363196a16ffb8a91a269bf7e",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 15,
+      "collectionId": 7,
+      "categoriesId": 2,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4d980a2b4cf40a0ed69c10e4829a9d775c00304d",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 16,
+      "collectionId": 8,
+      "categoriesId": 4,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 17,
+      "collectionId": 9,
+      "categoriesId": 2,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 18,
+      "collectionId": 3,
+      "categoriesId": 5,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 19,
+      "collectionId": 5,
+      "categoriesId": 4,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 20,
+      "collectionId": 1,
+      "categoriesId": 6,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4ab5417ccf834a93aa9a0b8c0e6a774872bff0b8",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 21,
+      "collectionId": 1,
+      "categoriesId": 1,
+      "image": "https://s3-alpha-sig.figma.com/img/ed65/0672/8605e77828c2dca2b6da5d4d87f66186?Expires=1690761600&Signature=N~Tf2ao6VebaAGPAfSteSJYqM0bRrklGDZCtHUffE93YNB8NV6O2nXlC~5aS3O2Sm2ifWgiPxk4iFKdrWjB-CVrXI9SoycNUuR2tzt9rV0lgn3oSqXByTDGIHX6lzITkgsYzZSoVMWJs41OLFiYxdgNq7osUCe~Mp6NhahphGh92peoAcBeAs~-~OrJW~c8P9hxa5KiQLsPLGYIzpqM~W1SAOvjI5jQmNVvBYTDOOL8pBMjFRIS2RB5z5kv05gQ-S3YhBJXwjkoDHsGRr-LThQhy-MeJvI6xgg~JwUm8gT0Mk-xZ~Txjv4pwTvgTiy9NJnVr9nhGirGEYdWeTsppgg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 22,
+      "collectionId": 2,
+      "categoriesId": 3,
+      "image": "https://s3-alpha-sig.figma.com/img/5a97/55b2/be5d65f3963d2bc282606dc6acd7fe2d?Expires=1690761600&Signature=BJaXxarq3FAt9ctQe2-t0LiimWeCxUjHnQcHgv-kG2c3Y0L9fHK82WN6zFp6sQf0xpNXvOhgIvDzlBjmpHAWNND4lPqnBI8Pk77~0zggUvHh9CeWbsJY3Ae2UUCasCkuX7jN2ieYyjSJFB-qOLsjva3tGjEb3EhDe~S1XoDpHPKJ8rVT4OCSWJqE~eHyD7Hh5shwcICYJ1jFz6j8J5QguyrB6YcdjxaGgITuxSnG1fxjblSu0LB6b86SHcEZ-hCMPUNUVpMH7T4mZUVmzsKFKeXVp0GBhwMK5Me6hyzUSkwIQfa5oPHQG1t-AXEUgqr~m1ziS~sxIRDXGOnQYsetXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 23,
+      "collectionId": 3,
+      "categoriesId": 2,
+      "image": "https://s3-alpha-sig.figma.com/img/eafa/bf40/6cb1d294ca686d29b62862c6f7bde43e?Expires=1690761600&Signature=cqYJ4RibWMxtthl0sAYc8PeIQny~VvlfppGWP33WBsI1IMFzuPkYpG~q9ZX2DAS8Bz1dNpfaEbgIPcPuZCXxJM108Hxb-KT7PCD0hoCTKaHa5jmac3nLM~eXWjJpoZYVrAj0iQfBigll2O2kkgwDHBUTo8KDABuMxYVitaPWoRKi0L07kqD7ruo-WlAW~x1AhOlwKWaX0B2vjFsHmm4nVYaw8BoJYROOGamG0dGQePl1A95HBey9-F6xxX6OtJTnqeO7-CBtBQDNOodCIBixnTjOiuWzFIGL4kKBfLAA8HR7GlrpaYunjdemMvTUAylbMPzYdM6AoIliV52c2yIEPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 24,
+      "collectionId": 4,
+      "categoriesId": 5,
+      "image": "https://s3-alpha-sig.figma.com/img/18db/ff63/f1f0dd3eb19c837df412907407129597?Expires=1690761600&Signature=YxeM3Kutudmy6N5TIJE6WayMHwNMetLCmIeHRWg4GHuvpeuricnPToyL6Y3sFtpxY-9kQLtkrkw1X7KvhEecqLAPIXsN9FtKVd6kmsyUmZD~pLbif1sJAa~MFuVptxnOorB4v-16HcEOSwsohwG3tRGJ-QdH52CqKNkI75mLnYZi3Ze70F9ppvvn3m-ICzxpzp-mw9X5iK8yr-v3-LQnUI1vMnG7NdbSZbLx~5Q-6owc9s173a8iyIasF5ADRS33b2SOWGtBelxQ4gduDil5KkSJfzdkGO9ohuSO4tG-~6L-xeO0RuD6Std2yLvKL4gZvMBrvCbM0tWfvY1AkHxfnQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 25,
+      "collectionId": 5,
+      "categoriesId": 1,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dee2eb1391d11c1e5ecc902a0c6592f4c16d3abb",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 26,
+      "collectionId": 6,
+      "categoriesId": 3,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a74de1b66730f5b5363196a16ffb8a91a269bf7e",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 27,
+      "collectionId": 7,
+      "categoriesId": 4,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4d980a2b4cf40a0ed69c10e4829a9d775c00304d",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 28,
+      "collectionId": 8,
+      "categoriesId": 4,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 29,
+      "collectionId": 9,
+      "categoriesId": 2,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 30,
+      "collectionId": 3,
+      "categoriesId": 1,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 31,
+      "collectionId": 1,
+      "categoriesId": 1,
+      "image": "https://s3-alpha-sig.figma.com/img/ed65/0672/8605e77828c2dca2b6da5d4d87f66186?Expires=1690761600&Signature=N~Tf2ao6VebaAGPAfSteSJYqM0bRrklGDZCtHUffE93YNB8NV6O2nXlC~5aS3O2Sm2ifWgiPxk4iFKdrWjB-CVrXI9SoycNUuR2tzt9rV0lgn3oSqXByTDGIHX6lzITkgsYzZSoVMWJs41OLFiYxdgNq7osUCe~Mp6NhahphGh92peoAcBeAs~-~OrJW~c8P9hxa5KiQLsPLGYIzpqM~W1SAOvjI5jQmNVvBYTDOOL8pBMjFRIS2RB5z5kv05gQ-S3YhBJXwjkoDHsGRr-LThQhy-MeJvI6xgg~JwUm8gT0Mk-xZ~Txjv4pwTvgTiy9NJnVr9nhGirGEYdWeTsppgg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 32,
+      "collectionId": 2,
+      "categoriesId": 2,
+      "image": "https://s3-alpha-sig.figma.com/img/5a97/55b2/be5d65f3963d2bc282606dc6acd7fe2d?Expires=1690761600&Signature=BJaXxarq3FAt9ctQe2-t0LiimWeCxUjHnQcHgv-kG2c3Y0L9fHK82WN6zFp6sQf0xpNXvOhgIvDzlBjmpHAWNND4lPqnBI8Pk77~0zggUvHh9CeWbsJY3Ae2UUCasCkuX7jN2ieYyjSJFB-qOLsjva3tGjEb3EhDe~S1XoDpHPKJ8rVT4OCSWJqE~eHyD7Hh5shwcICYJ1jFz6j8J5QguyrB6YcdjxaGgITuxSnG1fxjblSu0LB6b86SHcEZ-hCMPUNUVpMH7T4mZUVmzsKFKeXVp0GBhwMK5Me6hyzUSkwIQfa5oPHQG1t-AXEUgqr~m1ziS~sxIRDXGOnQYsetXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 33,
+      "collectionId": 3,
+      "categoriesId": 3,
+      "image": "https://s3-alpha-sig.figma.com/img/eafa/bf40/6cb1d294ca686d29b62862c6f7bde43e?Expires=1690761600&Signature=cqYJ4RibWMxtthl0sAYc8PeIQny~VvlfppGWP33WBsI1IMFzuPkYpG~q9ZX2DAS8Bz1dNpfaEbgIPcPuZCXxJM108Hxb-KT7PCD0hoCTKaHa5jmac3nLM~eXWjJpoZYVrAj0iQfBigll2O2kkgwDHBUTo8KDABuMxYVitaPWoRKi0L07kqD7ruo-WlAW~x1AhOlwKWaX0B2vjFsHmm4nVYaw8BoJYROOGamG0dGQePl1A95HBey9-F6xxX6OtJTnqeO7-CBtBQDNOodCIBixnTjOiuWzFIGL4kKBfLAA8HR7GlrpaYunjdemMvTUAylbMPzYdM6AoIliV52c2yIEPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 34,
+      "collectionId": 4,
+      "categoriesId": 4,
+      "image": "https://s3-alpha-sig.figma.com/img/18db/ff63/f1f0dd3eb19c837df412907407129597?Expires=1690761600&Signature=YxeM3Kutudmy6N5TIJE6WayMHwNMetLCmIeHRWg4GHuvpeuricnPToyL6Y3sFtpxY-9kQLtkrkw1X7KvhEecqLAPIXsN9FtKVd6kmsyUmZD~pLbif1sJAa~MFuVptxnOorB4v-16HcEOSwsohwG3tRGJ-QdH52CqKNkI75mLnYZi3Ze70F9ppvvn3m-ICzxpzp-mw9X5iK8yr-v3-LQnUI1vMnG7NdbSZbLx~5Q-6owc9s173a8iyIasF5ADRS33b2SOWGtBelxQ4gduDil5KkSJfzdkGO9ohuSO4tG-~6L-xeO0RuD6Std2yLvKL4gZvMBrvCbM0tWfvY1AkHxfnQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 35,
+      "collectionId": 5,
+      "categoriesId": 5,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dee2eb1391d11c1e5ecc902a0c6592f4c16d3abb",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 36,
+      "collectionId": 6,
+      "categoriesId": 6,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a74de1b66730f5b5363196a16ffb8a91a269bf7e",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 37,
+      "collectionId": 7,
+      "categoriesId": 1,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4d980a2b4cf40a0ed69c10e4829a9d775c00304d",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 38,
+      "collectionId": 8,
+      "categoriesId": 1,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 39,
+      "collectionId": 9,
+      "categoriesId": 4,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 40,
+      "collectionId": 3,
+      "categoriesId": 6,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 41,
+      "collectionId": 5,
+      "categoriesId": 3,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 42,
+      "collectionId": 1,
+      "categoriesId": 4,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4ab5417ccf834a93aa9a0b8c0e6a774872bff0b8",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 43,
+      "collectionId": 5,
+      "categoriesId": 2,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dee2eb1391d11c1e5ecc902a0c6592f4c16d3abb",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 44,
+      "collectionId": 6,
+      "categoriesId": 5,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a74de1b66730f5b5363196a16ffb8a91a269bf7e",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 45,
+      "collectionId": 7,
+      "categoriesId": 2,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4d980a2b4cf40a0ed69c10e4829a9d775c00304d",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 46,
+      "collectionId": 8,
+      "categoriesId": 4,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 47,
+      "collectionId": 9,
+      "categoriesId": 2,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 48,
+      "collectionId": 3,
+      "categoriesId": 5,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 49,
+      "collectionId": 5,
+      "categoriesId": 4,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 50,
+      "collectionId": 1,
+      "categoriesId": 6,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4ab5417ccf834a93aa9a0b8c0e6a774872bff0b8",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 51,
+      "collectionId": 1,
+      "categoriesId": 1,
+      "image": "https://s3-alpha-sig.figma.com/img/ed65/0672/8605e77828c2dca2b6da5d4d87f66186?Expires=1690761600&Signature=N~Tf2ao6VebaAGPAfSteSJYqM0bRrklGDZCtHUffE93YNB8NV6O2nXlC~5aS3O2Sm2ifWgiPxk4iFKdrWjB-CVrXI9SoycNUuR2tzt9rV0lgn3oSqXByTDGIHX6lzITkgsYzZSoVMWJs41OLFiYxdgNq7osUCe~Mp6NhahphGh92peoAcBeAs~-~OrJW~c8P9hxa5KiQLsPLGYIzpqM~W1SAOvjI5jQmNVvBYTDOOL8pBMjFRIS2RB5z5kv05gQ-S3YhBJXwjkoDHsGRr-LThQhy-MeJvI6xgg~JwUm8gT0Mk-xZ~Txjv4pwTvgTiy9NJnVr9nhGirGEYdWeTsppgg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 52,
+      "collectionId": 2,
+      "categoriesId": 3,
+      "image": "https://s3-alpha-sig.figma.com/img/5a97/55b2/be5d65f3963d2bc282606dc6acd7fe2d?Expires=1690761600&Signature=BJaXxarq3FAt9ctQe2-t0LiimWeCxUjHnQcHgv-kG2c3Y0L9fHK82WN6zFp6sQf0xpNXvOhgIvDzlBjmpHAWNND4lPqnBI8Pk77~0zggUvHh9CeWbsJY3Ae2UUCasCkuX7jN2ieYyjSJFB-qOLsjva3tGjEb3EhDe~S1XoDpHPKJ8rVT4OCSWJqE~eHyD7Hh5shwcICYJ1jFz6j8J5QguyrB6YcdjxaGgITuxSnG1fxjblSu0LB6b86SHcEZ-hCMPUNUVpMH7T4mZUVmzsKFKeXVp0GBhwMK5Me6hyzUSkwIQfa5oPHQG1t-AXEUgqr~m1ziS~sxIRDXGOnQYsetXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 53,
+      "collectionId": 3,
+      "categoriesId": 2,
+      "image": "https://s3-alpha-sig.figma.com/img/eafa/bf40/6cb1d294ca686d29b62862c6f7bde43e?Expires=1690761600&Signature=cqYJ4RibWMxtthl0sAYc8PeIQny~VvlfppGWP33WBsI1IMFzuPkYpG~q9ZX2DAS8Bz1dNpfaEbgIPcPuZCXxJM108Hxb-KT7PCD0hoCTKaHa5jmac3nLM~eXWjJpoZYVrAj0iQfBigll2O2kkgwDHBUTo8KDABuMxYVitaPWoRKi0L07kqD7ruo-WlAW~x1AhOlwKWaX0B2vjFsHmm4nVYaw8BoJYROOGamG0dGQePl1A95HBey9-F6xxX6OtJTnqeO7-CBtBQDNOodCIBixnTjOiuWzFIGL4kKBfLAA8HR7GlrpaYunjdemMvTUAylbMPzYdM6AoIliV52c2yIEPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 54,
+      "collectionId": 4,
+      "categoriesId": 5,
+      "image": "https://s3-alpha-sig.figma.com/img/18db/ff63/f1f0dd3eb19c837df412907407129597?Expires=1690761600&Signature=YxeM3Kutudmy6N5TIJE6WayMHwNMetLCmIeHRWg4GHuvpeuricnPToyL6Y3sFtpxY-9kQLtkrkw1X7KvhEecqLAPIXsN9FtKVd6kmsyUmZD~pLbif1sJAa~MFuVptxnOorB4v-16HcEOSwsohwG3tRGJ-QdH52CqKNkI75mLnYZi3Ze70F9ppvvn3m-ICzxpzp-mw9X5iK8yr-v3-LQnUI1vMnG7NdbSZbLx~5Q-6owc9s173a8iyIasF5ADRS33b2SOWGtBelxQ4gduDil5KkSJfzdkGO9ohuSO4tG-~6L-xeO0RuD6Std2yLvKL4gZvMBrvCbM0tWfvY1AkHxfnQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 55,
+      "collectionId": 5,
+      "categoriesId": 1,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dee2eb1391d11c1e5ecc902a0c6592f4c16d3abb",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 56,
+      "collectionId": 6,
+      "categoriesId": 3,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a74de1b66730f5b5363196a16ffb8a91a269bf7e",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 57,
+      "collectionId": 7,
+      "categoriesId": 4,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4d980a2b4cf40a0ed69c10e4829a9d775c00304d",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 58,
+      "collectionId": 8,
+      "categoriesId": 4,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 59,
+      "collectionId": 9,
+      "categoriesId": 2,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dc1ec06fb8a0f828f5124875bca8148fe0c94456",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 60,
+      "collectionId": 3,
+      "categoriesId": 1,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
       "title": "Grayson Premium Grey Wash Nest of Tables",
       "price": "140$"
     }
@@ -76,139 +484,80 @@
   "collections": [
     {
       "id": 1,
-      "collectionId": 1,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/fc4f78b452608fae9d209c21479bbc2e3acdb8da",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/d9b68e11548ad23561f72bb7ac58ee9002bb63a0",
+      "colTitle": "BEDROOM"
     },
     {
       "id": 2,
-      "collectionId": 2,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/3ba31bc70c97e2e915a1be341e2c41b5bb3e1d55",
+      "colTitle": "LIVING ROOM"
     },
     {
       "id": 3,
-      "collectionId": 3,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/3360f18d48cc860c94299bbd7c2cee006cd392c8",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/0e0edc152dea892ac4e3f99eecb4e8bd39effc60",
+      "colTitle": "KITHCEN"
     },
     {
       "id": 4,
-      "collectionId": 4,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/5c2560051de18f9d6f23b51045fc7090b7c82a42",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/67aaba98663a4ddd65289276a0bf7f802fcd6e9a",
+      "colTitle": "LIBRARY"
     },
     {
       "id": 5,
-      "collectionId": 5,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/3ba31bc70c97e2e915a1be341e2c41b5bb3e1d55",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/ae992450c20c2eedb6f1aa6418b80e76ab3d08cc",
+      "colTitle": "OFFICE"
     },
     {
       "id": 6,
-      "collectionId": 6,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/d9b68e11548ad23561f72bb7ac58ee9002bb63a0",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/ded89ed815cdf81ef8d45e035ef1af8dd15d77d7",
+      "colTitle": "LAUNDRY ROOM"
     },
     {
       "id": 7,
-      "collectionId": 7,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/0e0edc152dea892ac4e3f99eecb4e8bd39effc60",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/2fecf1993d32458cd54ecbd8d8e6747ae1db96c4",
+      "colTitle": "GUEST ROOM"
     },
     {
       "id": 8,
-      "collectionId": 8,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/2fecf1993d32458cd54ecbd8d8e6747ae1db96c4",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/2625da333ac66c54d2bf5a3481d2e4e0c2bd9158",
+      "colTitle": "FAMILY ROOM"
     },
     {
       "id": 9,
-      "collectionId": 9,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/ded89ed815cdf81ef8d45e035ef1af8dd15d77d7",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
-    },
-    {
-      "id": 10,
-      "collectionId": 5,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/67aaba98663a4ddd65289276a0bf7f802fcd6e9a",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
-    },
-    {
-      "id": 11,
-      "collectionId": 6,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/ae992450c20c2eedb6f1aa6418b80e76ab3d08cc",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
-    },
-    {
-      "id": 12,
-      "collectionId": 7,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/629a424accdfc649c7aeee6a63e580d48c745949",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
-    },
-    {
-      "id": 13,
-      "collectionId": 8,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/2625da333ac66c54d2bf5a3481d2e4e0c2bd9158",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
-    },
-    {
-      "id": 14,
-      "collectionId": 9,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/67aaba98663a4ddd65289276a0bf7f802fcd6e9a",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "colTitle": "BATHROOM"
     }
   ],
   "categories": [
     {
       "id": 1,
       "image": "https://s3-alpha-sig.figma.com/img/ed65/0672/8605e77828c2dca2b6da5d4d87f66186?Expires=1690761600&Signature=N~Tf2ao6VebaAGPAfSteSJYqM0bRrklGDZCtHUffE93YNB8NV6O2nXlC~5aS3O2Sm2ifWgiPxk4iFKdrWjB-CVrXI9SoycNUuR2tzt9rV0lgn3oSqXByTDGIHX6lzITkgsYzZSoVMWJs41OLFiYxdgNq7osUCe~Mp6NhahphGh92peoAcBeAs~-~OrJW~c8P9hxa5KiQLsPLGYIzpqM~W1SAOvjI5jQmNVvBYTDOOL8pBMjFRIS2RB5z5kv05gQ-S3YhBJXwjkoDHsGRr-LThQhy-MeJvI6xgg~JwUm8gT0Mk-xZ~Txjv4pwTvgTiy9NJnVr9nhGirGEYdWeTsppgg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "catTitle": "SOFAS"
     },
     {
       "id": 2,
       "image": "https://s3-alpha-sig.figma.com/img/5a97/55b2/be5d65f3963d2bc282606dc6acd7fe2d?Expires=1690761600&Signature=BJaXxarq3FAt9ctQe2-t0LiimWeCxUjHnQcHgv-kG2c3Y0L9fHK82WN6zFp6sQf0xpNXvOhgIvDzlBjmpHAWNND4lPqnBI8Pk77~0zggUvHh9CeWbsJY3Ae2UUCasCkuX7jN2ieYyjSJFB-qOLsjva3tGjEb3EhDe~S1XoDpHPKJ8rVT4OCSWJqE~eHyD7Hh5shwcICYJ1jFz6j8J5QguyrB6YcdjxaGgITuxSnG1fxjblSu0LB6b86SHcEZ-hCMPUNUVpMH7T4mZUVmzsKFKeXVp0GBhwMK5Me6hyzUSkwIQfa5oPHQG1t-AXEUgqr~m1ziS~sxIRDXGOnQYsetXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "catTitle": "BEDS AND HEADBOARDS"
     },
     {
       "id": 3,
       "image": "https://s3-alpha-sig.figma.com/img/eafa/bf40/6cb1d294ca686d29b62862c6f7bde43e?Expires=1690761600&Signature=cqYJ4RibWMxtthl0sAYc8PeIQny~VvlfppGWP33WBsI1IMFzuPkYpG~q9ZX2DAS8Bz1dNpfaEbgIPcPuZCXxJM108Hxb-KT7PCD0hoCTKaHa5jmac3nLM~eXWjJpoZYVrAj0iQfBigll2O2kkgwDHBUTo8KDABuMxYVitaPWoRKi0L07kqD7ruo-WlAW~x1AhOlwKWaX0B2vjFsHmm4nVYaw8BoJYROOGamG0dGQePl1A95HBey9-F6xxX6OtJTnqeO7-CBtBQDNOodCIBixnTjOiuWzFIGL4kKBfLAA8HR7GlrpaYunjdemMvTUAylbMPzYdM6AoIliV52c2yIEPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "catTitle": "RUGS"
     },
     {
       "id": 4,
       "image": "https://s3-alpha-sig.figma.com/img/18db/ff63/f1f0dd3eb19c837df412907407129597?Expires=1690761600&Signature=YxeM3Kutudmy6N5TIJE6WayMHwNMetLCmIeHRWg4GHuvpeuricnPToyL6Y3sFtpxY-9kQLtkrkw1X7KvhEecqLAPIXsN9FtKVd6kmsyUmZD~pLbif1sJAa~MFuVptxnOorB4v-16HcEOSwsohwG3tRGJ-QdH52CqKNkI75mLnYZi3Ze70F9ppvvn3m-ICzxpzp-mw9X5iK8yr-v3-LQnUI1vMnG7NdbSZbLx~5Q-6owc9s173a8iyIasF5ADRS33b2SOWGtBelxQ4gduDil5KkSJfzdkGO9ohuSO4tG-~6L-xeO0RuD6Std2yLvKL4gZvMBrvCbM0tWfvY1AkHxfnQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "catTitle": "CUSHIONS"
     },
     {
       "id": 5,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dee2eb1391d11c1e5ecc902a0c6592f4c16d3abb",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "catTitle": "ARMCHAIRS"
     },
     {
       "id": 6,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a74de1b66730f5b5363196a16ffb8a91a269bf7e",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
+      "catTitle": "HEADBOARDS"
     }
   ],
   "about": {

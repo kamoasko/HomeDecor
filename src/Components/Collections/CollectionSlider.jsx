@@ -1,10 +1,40 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import CollectionsCard from "../CollectionsCard";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const CollectionSlider = () => {
   const sliderRef = useRef(null);
+  const [collections, setCollections] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  const getColData = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/collections");
+      if (res.ok) {
+        const colData = await res.json();
+        setCollections(() => colData);
+      }
+    } catch (e) {
+      setError(() => e.message);
+    }
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    getColData();
+  }, []);
+
+  // const loginBg = { backgroundImage: `url(${auth.image})` };
+
+  if (loading) {
+    return <h1>LOADING......</h1>;
+  }
+
+  if (error) {
+    return <h3>{error}</h3>;
+  }
 
   const settings = {
     dots: false,
@@ -44,7 +74,16 @@ const CollectionSlider = () => {
   return (
     <div className="collections__content">
       <Slider ref={sliderRef} {...settings}>
-        <CollectionsCard />
+        {collections.length &&
+          collections.map((collection) => {
+            return (
+              <CollectionsCard
+                image={collection.image}
+                colTitle={collection.colTitle}
+                key={collection.id}
+              />
+            );
+          })}
       </Slider>
       <div className="buttons flex">
         <div onClick={handlePrev} className="button flex">
