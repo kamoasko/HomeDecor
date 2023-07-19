@@ -14,13 +14,16 @@ function Contact() {
     try {
       const res = await fetch("http://localhost:5000/contact");
       if (res.ok) {
-        const contactImg = await res.json();
-        setContact(() => contactImg);
+        const contactData = await res.json();
+        setContact(() => contactData);
+        setLoading(false);
+      } else {
+        setLoading(false);
+        throw Error("Networ error!!!");
       }
     } catch (e) {
       setError(() => e.message);
     }
-    setLoading(false);
   };
 
   useEffect(() => {

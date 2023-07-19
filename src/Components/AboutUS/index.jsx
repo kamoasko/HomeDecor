@@ -12,13 +12,16 @@ function AboutUs() {
     try {
       const res = await fetch("http://localhost:5000/about");
       if (res.ok) {
-        const aboutImage = await res.json();
-        setAbout(() => aboutImage);
+        const aboutData = await res.json();
+        setAbout(() => aboutData);
+        setLoading(false);
+      } else {
+        setLoading(false);
+        throw Error("Network error!!!");
       }
     } catch (e) {
       setError(() => e.message);
     }
-    setLoading(false);
   };
 
   useEffect(() => {

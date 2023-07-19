@@ -105,6 +105,7 @@
   background-color: var(--color-main);
   color: #fff;
   font-size: 1.8rem;
+  cursor: pointer !important;
 }
 
 .slick-dots {

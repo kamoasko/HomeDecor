@@ -1,10 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./collection-page.css";
 import Breadcrumb from "../../Components/Breadcrumb";
-import SectionTitle from "../../Components/SectionTitle";
 import CollectionsCard from "../../Components/CollectionsCard";
 
 const CollectionsPage = () => {
+  const [collections, setCollections] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  const getColData = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/collections");
+      if (res.ok) {
+        const colData = await res.json();
+        setCollections(() => colData);
+        setLoading(false);
+      } else {
+        setLoading(false);
+        throw Error("Network error!!!");
+      }
+    } catch (e) {
+      setError(() => e.message);
+    }
+  };
+
+  useEffect(() => {
+    getColData();
+  }, []);
+
+  if (loading) {
+    return <h1>LOADING......</h1>;
+  }
+
+  if (error) {
+    return <h3>{error}</h3>;
+  }
+
   return (
     <>
       <Breadcrumb />
@@ -17,16 +48,16 @@ const CollectionsPage = () => {
             quo minus id quod maxime.
           </p>
           <div className="collection__content">
-            <CollectionsCard />
-            <CollectionsCard />
-            <CollectionsCard />
-            <CollectionsCard />
-            <CollectionsCard />
-            <CollectionsCard />
-            <CollectionsCard />
-            <CollectionsCard />
-            <CollectionsCard />
-            <CollectionsCard />
+            {collections.length &&
+              collections.map((collection) => {
+                return (
+                  <CollectionsCard
+                    image={collection.image}
+                    title={collection.colTitle}
+                    key={collection.id}
+                  />
+                );
+              })}
           </div>
         </div>
       </section>

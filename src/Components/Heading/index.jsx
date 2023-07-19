@@ -25,7 +25,7 @@ function Heading() {
   };
 
   useEffect(() => {
-    getHeading().then();
+    getHeading();
   }, []);
 
   if (loading) {

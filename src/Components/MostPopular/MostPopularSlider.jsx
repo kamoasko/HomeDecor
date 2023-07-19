@@ -1,10 +1,42 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
 import ProductCard from "../ProductCard";
 
 const MostPopularSlider = () => {
   const sliderRef = useRef(null);
+
+  const [populars, setPopulars] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  const getPopulars = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/products");
+      if (res.ok) {
+        const data = await res.json();
+        setPopulars(() => data.slice(4, 12));
+        setLoading(false);
+      } else {
+        setLoading(false);
+        throw Error("Network error!!!");
+      }
+    } catch (e) {
+      setError(() => e.message);
+    }
+  };
+
+  useEffect(() => {
+    getPopulars();
+  }, []);
+
+  if (loading) {
+    return <h1>LOADING......</h1>;
+  }
+
+  if (error) {
+    return <h3>{error}</h3>;
+  }
 
   const settings = {
     dots: false,
@@ -50,12 +82,17 @@ const MostPopularSlider = () => {
   return (
     <div className="popular__content">
       <Slider ref={sliderRef} {...settings}>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {populars.length &&
+          populars.map((popular) => {
+            return (
+              <ProductCard
+                productImg={popular.image}
+                productTitle={popular.title}
+                price={popular.price}
+                key={popular.id}
+              />
+            );
+          })}
       </Slider>
       <div className="buttons flex">
         <div onClick={handlePrev} className="button flex">

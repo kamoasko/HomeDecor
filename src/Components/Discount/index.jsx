@@ -13,11 +13,14 @@ function Discount() {
       if (res.ok) {
         const discountImage = await res.json();
         setDiscount(() => discountImage);
+        setLoading(false);
+      } else {
+        setLoading(false);
+        throw Error("Network error!!!");
       }
     } catch (e) {
       setError(() => e.message);
     }
-    setLoading(false);
   };
 
   useEffect(() => {

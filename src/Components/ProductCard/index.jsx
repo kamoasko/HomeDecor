@@ -1,20 +1,19 @@
 import React from "react";
 import "./product-card.css";
-import product from "../../assets/images/Products/products1.png";
 import { Link } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
 
-function ProductCard() {
+function ProductCard({ productImg, productTitle, price }) {
   return (
     <Link to="/products/:id" className="products__card">
       <div className="products__card-image">
-        <img src={product} />
+        <img src={productImg} />
       </div>
       <button className="favorite flex">
         <AiOutlineHeart />
       </button>
-      <p className="subtitle">Grayson Premium Grey Wash Nest of Tables</p>
-      <span className="price">140$</span>
+      <p className="subtitle">{productTitle}</p>
+      <span className="price">{price}</span>
     </Link>
   );
 }

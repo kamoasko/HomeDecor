@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -7,6 +7,34 @@ import CollectionsCard from "../CollectionsCard";
 
 const HeadingSlider = () => {
   const sliderRef = useRef(null);
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  const getCategoriesData = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/categories");
+      if (res.ok) {
+        const colData = await res.json();
+        setCategories(() => colData);
+      }
+    } catch (e) {
+      setError(() => e.message);
+    }
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    getCategoriesData();
+  }, []);
+
+  if (loading) {
+    return <h1>LOADING......</h1>;
+  }
+
+  if (error) {
+    return <h3>{error}</h3>;
+  }
 
   const settings = {
     dots: false,
@@ -53,12 +81,16 @@ const HeadingSlider = () => {
   return (
     <section className="beginning__slider">
       <Slider ref={sliderRef} {...settings}>
-        <CollectionsCard />
-        <CollectionsCard />
-        <CollectionsCard />
-        <CollectionsCard />
-        <CollectionsCard />
-        <CollectionsCard />
+        {categories.length &&
+          categories.map((category) => {
+            return (
+              <CollectionsCard
+                image={category.image}
+                title={category.catTitle}
+                key={category.id}
+              />
+            );
+          })}
       </Slider>
       <div className="buttons flex">
         <div onClick={handlePrev} className="button flex">

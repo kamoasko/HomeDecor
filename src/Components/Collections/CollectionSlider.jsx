@@ -15,21 +15,22 @@ const CollectionSlider = () => {
       if (res.ok) {
         const colData = await res.json();
         setCollections(() => colData);
+        setLoading(false);
+      } else {
+        setLoading(false);
+        throw Error("Network error!!!");
       }
     } catch (e) {
       setError(() => e.message);
     }
-    setLoading(false);
   };
 
   useEffect(() => {
     getColData();
   }, []);
 
-  // const loginBg = { backgroundImage: `url(${auth.image})` };
-
   if (loading) {
-    return <h1>LOADING......</h1>;
+    return <h3>LOADING......</h3>;
   }
 
   if (error) {
@@ -79,7 +80,7 @@ const CollectionSlider = () => {
             return (
               <CollectionsCard
                 image={collection.image}
-                colTitle={collection.colTitle}
+                title={collection.colTitle}
                 key={collection.id}
               />
             );
