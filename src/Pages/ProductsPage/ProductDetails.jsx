@@ -4,8 +4,6 @@ import Breadcrumb from "../../Components/Breadcrumb";
 import Buttons from "../../Components/Buttons";
 import SecondaryButtons from "../../Components/SecondaryButtons";
 import SectionTitle from "../../Components/SectionTitle";
-import ProductCard from "../../Components/ProductCard";
-import SliderButtons from "../../Components/SliderButtons";
 import ProductCount from "../../Components/ProductCount";
 import { Outlet, useParams } from "react-router-dom";
 import SimilarSlider from "./SimilarSlider";

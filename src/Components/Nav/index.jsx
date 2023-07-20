@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./nav.css";
 import logo from "../../assets/images/Header/Logo.png";
 import { Link, NavLink } from "react-router-dom";
@@ -6,7 +6,16 @@ import { CiSearch } from "react-icons/ci";
 import { FaRegUser } from "react-icons/fa";
 import { BsCart2 } from "react-icons/bs";
 
-function Nav() {
+function Nav({ menu, setMenu }) {
+  let menuClass = menu ? "nav__menu active" : "nav__menu";
+  let hamburgerClass = menu ? "hamburger active" : "hamburger";
+  let cartClass = menu ? "nav__icon1 active" : "nav__icon1";
+  let userClass = menu ? "nav__icon2 active" : "nav__icon2";
+  let langsClass = menu ? "hamburger__langs active" : "hamburger__langs";
+  let logoClass = menu ? "navtop__logo active" : "navtop__logo";
+  let searchClass = menu ? "search active" : "search";
+  // let openMobMenu = () => {};
+
   return (
     <header className="header container">
       <div className="navtop flex">
@@ -16,28 +25,31 @@ function Nav() {
             <CiSearch />
           </button>
         </div>
-        <div className="navtop__logo">
+        <div className={logoClass}>
           <img src={logo} />
         </div>
         <div className="navtop__right flex">
-          <button className="search">
+          <button className={searchClass}>
             <CiSearch />
           </button>
-          <div className="hamburger">
+          <div
+            className={hamburgerClass}
+            onClick={() => setMenu((prev) => !prev)}
+          >
             <div className="bar"></div>
             <div className="bar"></div>
             <div className="bar"></div>
           </div>
-          <Link to="/shopping-cart">
+          <Link className={cartClass} to="/shopping-cart">
             <BsCart2 />
           </Link>
-          <Link to="/auth/login">
+          <Link className={userClass} to="/auth/login">
             <FaRegUser />
           </Link>
         </div>
       </div>
       <nav className="nav">
-        <ul className="nav__menu flex">
+        <ul className={`flex ${menuClass}`}>
           <li className="nav__menu-item ">
             <NavLink to="/">Home</NavLink>
           </li>
@@ -55,6 +67,11 @@ function Nav() {
           </li>
         </ul>
       </nav>
+      <div className={langsClass}>
+        <NavLink to="/">Az</NavLink>
+        <NavLink to="/about">En</NavLink>
+        <NavLink to="/contact">Ru</NavLink>
+      </div>
     </header>
   );
 }

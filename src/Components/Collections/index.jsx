@@ -1,7 +1,6 @@
 import React from "react";
 import "./collections.css";
 import SectionTitle from "../SectionTitle";
-import SliderButtons from "../SliderButtons";
 import CollectionSlider from "./CollectionSlider";
 
 function Collections() {

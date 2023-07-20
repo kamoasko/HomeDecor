@@ -1,7 +1,6 @@
 import React from "react";
 import "./most-popular.css";
 import SectionTitle from "../SectionTitle";
-import SliderButtons from "../SliderButtons";
 import MostPopularSlider from "./MostPopularSlider";
 
 function MostPopular() {
