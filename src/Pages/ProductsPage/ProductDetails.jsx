@@ -34,7 +34,7 @@ const ProductDetails = () => {
 
   useEffect(() => {
     getProducts();
-  }, []);
+  }, [id]);
 
   if (loading) {
     return <h1>LOADING......</h1>;
@@ -46,7 +46,7 @@ const ProductDetails = () => {
 
   return (
     <>
-      <Breadcrumb />
+      <Breadcrumb titleId={products.title} />
       <div className="container">
         <section className="details">
           <div className="details__left">
