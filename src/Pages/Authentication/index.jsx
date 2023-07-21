@@ -3,11 +3,14 @@ import "./auth-layout.css";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
+import Nav from "../../Components/Nav";
+import Footer from "../../Components/Footer";
 
 const AuthLayout = () => {
   const [auth, setAuth] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const isMobile = window.innerWidth <= 768;
 
   const getAuth = async () => {
     try {
@@ -37,13 +40,17 @@ const AuthLayout = () => {
   }
 
   return (
-    <div className="auth ">
-      <Outlet />
-      <div
-        className="auth__image"
-        style={{ backgroundImage: `url(${loginBg})` }}
-      ></div>
-    </div>
+    <>
+      {isMobile && <Nav />}
+      <div className="auth ">
+        <Outlet />
+        <div
+          className="auth__image"
+          style={{ backgroundImage: `url(${loginBg})` }}
+        ></div>
+      </div>
+      {isMobile && <Footer />}
+    </>
   );
 };
 
