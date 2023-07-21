@@ -18,6 +18,10 @@ const AuthLayout = () => {
       if (res.ok) {
         const authImg = await res.json();
         setAuth(() => authImg);
+        setLoading(false);
+      } else {
+        setLoading(false);
+        throw Error("Network error!!!");
       }
     } catch (e) {
       setError(() => e.message);
@@ -26,10 +30,8 @@ const AuthLayout = () => {
   };
 
   useEffect(() => {
-    getAuth().then();
+    getAuth();
   }, []);
-
-  const loginBg = { backgroundImage: `url(${auth.image})` };
 
   if (loading) {
     return <h3>LOADING......</h3>;
@@ -46,7 +48,7 @@ const AuthLayout = () => {
         <Outlet />
         <div
           className="auth__image"
-          style={{ backgroundImage: `url(${loginBg})` }}
+          style={{ backgroundImage: `url(${auth.image})` }}
         ></div>
       </div>
       {isMobile && <Footer />}
