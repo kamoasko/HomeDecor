@@ -2,7 +2,6 @@ import React from "react";
 import "./contact.css";
 import SectionTitle from "../SectionTitle";
 import ContacForm from "../ContactForm";
-// import Modal from "../Modals";
 import { useState, useEffect } from "react";
 
 function Contact() {
@@ -51,7 +50,6 @@ function Contact() {
           </div>
         </div>
       </div>
-      {/* <Modal /> */}
     </section>
   );
 }

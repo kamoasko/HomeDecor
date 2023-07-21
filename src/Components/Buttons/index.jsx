@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./buttons.css";
 import { Link } from "react-router-dom";
 import { BsHandbag } from "react-icons/bs";

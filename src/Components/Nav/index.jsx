@@ -16,11 +16,11 @@ function Nav({ menu, setMenu }) {
   let langsClass = menu ? "hamburger__langs active" : "hamburger__langs";
   let logoClass = menu ? "navtop__logo active" : "navtop__logo";
   let searchClass = menu ? "search active" : "search";
-  const [isvisible, setIsvisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   return (
     <header className="header">
-      {isvisible && (
+      {isVisible && (
         <Overlay>
           <div className="search__area">
             <span className="search__icon">
@@ -32,7 +32,7 @@ function Nav({ menu, setMenu }) {
               placeholder="SEARCH OUR STORE"
             />
             <button
-              onClick={() => setIsvisible(false)}
+              onClick={() => setIsVisible(false)}
               className="search__close"
             >
               <GrClose />
@@ -44,7 +44,7 @@ function Nav({ menu, setMenu }) {
         <div className="navtop flex">
           <div className="navtop__left flex">
             <button className="lang">Az</button>
-            <button onClick={() => setIsvisible(true)} className="search">
+            <button onClick={() => setIsVisible(true)} className="search">
               <CiSearch />
             </button>
           </div>
