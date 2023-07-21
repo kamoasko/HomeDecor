@@ -46,7 +46,38 @@
   padding: 0.5rem;
 }
 
-.search {
+.search__area {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-bg);
+  padding: 0 2rem;
+}
+
+.search__active {
+  width: 100%;
+  height: 8rem;
+  background-color: transparent;
+  padding: 0 2rem;
+  font-size: 2rem;
+}
+
+input[type="search"]::placeholder {
+  /* font-size: 2rem;
+  font-family: var(--main-font); */
+  font: normal normal 500 2rem/2.8rem var(--main-font);
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.search__icon {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.search,
+.search__close {
   font-size: 2.2rem;
   background-color: transparent;
 }
