@@ -13,7 +13,11 @@ const PersonelInfo = () => {
             className="personel__inp"
             placeholder="youremailhere@gmail.com"
           />
-          <input type="text" className="personel__inp" placeholder="NAME" />
+          <input
+            type="text"
+            className="personel__inp"
+            placeholder="CITY, STREET"
+          />
         </form>
         <form className="personel__form-side">
           <input type="text" className="personel__inp" placeholder="SURNAME" />
@@ -23,7 +27,7 @@ const PersonelInfo = () => {
             placeholder="+ 994 (__) ___ __ __"
           />
           <input
-            type="number"
+            type="text"
             className="personel__inp"
             placeholder="POSTAL CODE"
           />
