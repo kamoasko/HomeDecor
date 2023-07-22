@@ -1,11 +1,9 @@
 import React from "react";
 import "./my-account.css";
 import Breadcrumb from "../../Components/Breadcrumb";
-import { FaUser } from "react-icons/fa";
+import { FaRegUser, FaUser } from "react-icons/fa";
 import { AiOutlineHeart } from "react-icons/ai";
-import { NavLink, Outlet, useLocation } from "react-router-dom";
-import AccountForm from "../../Components/AccountForm";
-import WishlistCard from "../../Components/WishlistCard";
+import { NavLink, Outlet } from "react-router-dom";
 
 const MyAccount = () => {
   return (
@@ -21,7 +19,8 @@ const MyAccount = () => {
                   to="/account/personel"
                   className="account__items-list flex"
                 >
-                  <FaUser /> PERSONAL INFORMATION
+                  <FaUser />
+                  PERSONAL INFORMATION
                 </NavLink>
               </li>
               <li>
@@ -29,7 +28,8 @@ const MyAccount = () => {
                   to="/account/wishlist"
                   className="account__items-list flex"
                 >
-                  <AiOutlineHeart /> WISHLIST
+                  <AiOutlineHeart />
+                  WISHLIST
                 </NavLink>
               </li>
               <li>
@@ -54,7 +54,7 @@ const MyAccount = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
-                  </svg>{" "}
+                  </svg>
                   LOG OUT
                 </NavLink>
               </li>
