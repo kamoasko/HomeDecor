@@ -1,8 +1,7 @@
 import React from "react";
 import "./auth-layout.css";
 import { Outlet } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Nav from "../../Components/Nav";
 import Footer from "../../Components/Footer";
 

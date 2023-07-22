@@ -18,21 +18,44 @@
   opacity: 0.8;
 }
 
+.product__sorting-choices {
+  position: relative;
+  width: 33rem;
+}
+
 .sort {
   justify-content: center;
   border-radius: 1rem;
   column-gap: 2rem;
-  border: 0.1rem solid var(--color-main);
-  background-color: var(--color-bg);
-  width: 33rem;
-  height: 5.4rem;
-}
-
-.sort,
-.sort > span {
   color: var(--color-main);
   font-weight: 500;
   font-size: 1.6rem;
+  border: 0.1rem solid var(--color-main);
+  background-color: var(--color-bg);
+  width: 100%;
+  height: 5.4rem;
+  position: relative;
+  z-index: 600;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.sort__filter {
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  color: var(--color-main);
+  border-radius: 1rem;
+  border: 0.1rem solid var(--color-main);
+  width: 100%;
+  padding: 2.2rem 2rem;
+  font-weight: 500;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  z-index: 500;
 }
 
 .product__content {
@@ -76,10 +99,10 @@
   display: block;
   width: 2rem;
   height: 2rem;
-  border: 0.1rem solid #808080;
+  border: 0.2rem solid var(--color-main);
   border-radius: 0.3rem;
   content: "";
-  background: var(--color-bg);
+  background-color: var(--color-bg);
 }
 
 .categories__inp[type="checkbox"]:after {
@@ -89,36 +112,35 @@
   bottom: 2rem;
   width: 2rem;
   height: 2rem;
-  border: 0.1rem solid var(--color-main);
+  border: 0.2rem solid var(--color-main);
   border-radius: 0.3rem;
   content: "";
-  background-image: linear-gradient(135deg, #b1b6be 0%, #fff 100%);
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .categories__inp[type="checkbox"]:checked:after {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAQAAABuW59YAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAB2SURBVHjaAGkAlv8A3QDyAP0A/QD+Dam3W+kCAAD8APYAAgTVZaZCGwwA5wr0AvcA+Dh+7UX/x24AqK3Wg/8nt6w4/5q71wAAVP9g/7rTXf9n/+9N+AAAtpJa/zf/S//DhP8H/wAA4gzWj2P4lsf0JP0A/wADAHB0Ngka6UmKAAAAAElFTkSuQmCC"),
-    linear-gradient(135deg, #b1b6be 0%, #fff 100%);
+  background-image: url("../../assets/images/Products/checked.png");
 }
 
 /* .categories__inp[type="checkbox"]:disabled:after {
   -webkit-filter: opacity(0.4);
 } */
 
-.categories__inp[type="checkbox"]:not(:disabled):checked:hover:after {
+/* .categories__inp[type="checkbox"]:not(:disabled):checked:hover:after {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAQAAABuW59YAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAAB2SURBVHjaAGkAlv8A3QDyAP0A/QD+Dam3W+kCAAD8APYAAgTVZaZCGwwA5wr0AvcA+Dh+7UX/x24AqK3Wg/8nt6w4/5q71wAAVP9g/7rTXf9n/+9N+AAAtpJa/zf/S//DhP8H/wAA4gzWj2P4lsf0JP0A/wADAHB0Ngka6UmKAAAAAElFTkSuQmCC"),
     linear-gradient(135deg, #8bb0c2 0%, #fff 100%);
-}
+} */
 
-.categories__inp[type="checkbox"]:not(:disabled):hover:after {
+/* .categories__inp[type="checkbox"]:not(:disabled):hover:after {
   background-image: linear-gradient(135deg, #8bb0c2 0%, #fff 100%);
   border-color: #85a9bb #92c2da #92c2da #85a9bb;
-}
+} */
 
-.categories__inp[type="checkbox"]:not(:disabled):hover:before {
+/* .categories__inp[type="checkbox"]:not(:disabled):hover:before {
   border-color: #3d7591;
-}
+} */
 
 .product__content-right {
   display: grid;
@@ -129,14 +151,18 @@
 }
 
 @media (max-width: 768px) {
+  .product__sorting-choices {
+    width: 100%;
+  }
+
   .sort {
     width: 100%;
     justify-content: space-between;
     padding: 0 2rem;
   }
 
-  .sort > span {
-    order: -1;
+  .sort > svg {
+    order: 2;
   }
 
   .product__content {
@@ -158,10 +184,22 @@
   .sortby > li {
     height: 5.4rem;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
+  }
+
+  .sortby__main {
+    position: relative;
+    height: 100%;
+    z-index: 400;
+    overflow: -moz-hidden-unscrollable;
+  }
+
+  .sbm1 {
+    z-index: 300;
   }
 
   .sortby__list {
+    background-color: var(--color-bg);
     justify-content: space-between;
     border: 0.1rem solid var(--color-main);
     border-radius: 1rem;
@@ -169,6 +207,25 @@
     width: 100%;
     padding: 0 2rem;
     color: var(--color-main);
+  }
+
+  .sortby__items {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    background-color: var(--color-bg);
+    color: var(--color-main);
+    border-radius: 0 0 1rem 1rem;
+    border-left: 0.1rem solid var(--color-main);
+    border-right: 0.1rem solid var(--color-main);
+    border-bottom: 0.1rem solid var(--color-main);
+    width: 100%;
+    padding: 2.2rem 2rem;
+    z-index: 200;
+  }
+
+  .sbi1 {
+    z-index: 100;
   }
 
   .sortby__list > p {
