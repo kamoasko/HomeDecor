@@ -169,3 +169,10 @@
     display: none;
   }
 }
+
+@media (max-width: 768px) {
+  .details__btns.flex {
+    flex-direction: column;
+    row-gap: 1.5rem;
+  }
+}
