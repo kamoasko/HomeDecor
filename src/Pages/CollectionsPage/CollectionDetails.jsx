@@ -7,7 +7,6 @@ import { useParams, Outlet } from "react-router-dom";
 
 const CollectionDetails = () => {
   const { id } = useParams();
-  console.log(id);
   const [products, setProducts] = useState([]);
   const [collections, setCollections] = useState({});
   const [loading, setLoading] = useState(true);
@@ -63,7 +62,7 @@ const CollectionDetails = () => {
 
   return (
     <>
-      <Breadcrumb />
+      <Breadcrumb titleId={collections.colTitle} />
       <section className="product ">
         <div className="container">
           <div className="product__title flex">

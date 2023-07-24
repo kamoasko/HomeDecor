@@ -544,47 +544,47 @@
     {
       "id": 1,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/d9b68e11548ad23561f72bb7ac58ee9002bb63a0",
-      "colTitle": "BEDROOM"
+      "colTitle": "Bedroom"
     },
     {
       "id": 2,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/3ba31bc70c97e2e915a1be341e2c41b5bb3e1d55",
-      "colTitle": "LIVING ROOM"
+      "colTitle": "Living room"
     },
     {
       "id": 3,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/0e0edc152dea892ac4e3f99eecb4e8bd39effc60",
-      "colTitle": "KITHCEN"
+      "colTitle": "Kitchen"
     },
     {
       "id": 4,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/67aaba98663a4ddd65289276a0bf7f802fcd6e9a",
-      "colTitle": "LIBRARY"
+      "colTitle": "Library"
     },
     {
       "id": 5,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/ae992450c20c2eedb6f1aa6418b80e76ab3d08cc",
-      "colTitle": "OFFICE"
+      "colTitle": "Office"
     },
     {
       "id": 6,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/ded89ed815cdf81ef8d45e035ef1af8dd15d77d7",
-      "colTitle": "LAUNDRY ROOM"
+      "colTitle": "Laundry room"
     },
     {
       "id": 7,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/2fecf1993d32458cd54ecbd8d8e6747ae1db96c4",
-      "colTitle": "GUEST ROOM"
+      "colTitle": "Guest room"
     },
     {
       "id": 8,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/2625da333ac66c54d2bf5a3481d2e4e0c2bd9158",
-      "colTitle": "FAMILY ROOM"
+      "colTitle": "Family room"
     },
     {
       "id": 9,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/629a424accdfc649c7aeee6a63e580d48c745949",
-      "colTitle": "BATHROOM"
+      "colTitle": "Bathroom"
     }
   ],
   "categories": [
