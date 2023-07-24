@@ -81,6 +81,7 @@ const CollectionSlider = () => {
               <CollectionsCard
                 image={collection.image}
                 title={collection.colTitle}
+                link={`collections/${collection.id}`}
                 key={collection.id}
               />
             );

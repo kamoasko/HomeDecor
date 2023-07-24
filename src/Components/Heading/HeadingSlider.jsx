@@ -87,6 +87,7 @@ const HeadingSlider = () => {
               <CollectionsCard
                 image={category.image}
                 title={category.catTitle}
+                link={`collections/${category.id}`}
                 key={category.id}
               />
             );

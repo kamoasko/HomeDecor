@@ -48,6 +48,7 @@ function Products() {
                   productImg={product.image}
                   productTitle={product.title}
                   price={product.price}
+                  id={product.id}
                   key={product.id}
                 />
               );

@@ -89,6 +89,7 @@ const MostPopularSlider = () => {
                 productImg={popular.image}
                 productTitle={popular.title}
                 price={popular.price}
+                id={popular.id}
                 key={popular.id}
               />
             );
