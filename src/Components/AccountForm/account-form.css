@@ -17,12 +17,16 @@
   padding: 1.7rem 2rem;
 }
 
-/* .account__inp > input[type="password"] {
-  font-size: 2rem;
-} */
-
 .password {
   padding-right: 1.7rem;
+}
+
+.password > input {
+  border: 0;
+}
+
+.password span {
+  cursor: pointer;
 }
 
 .account__btn {
