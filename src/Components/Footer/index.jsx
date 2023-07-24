@@ -1,15 +1,16 @@
 import React from "react";
 import "./footer.css";
 import footerLogo from "../../assets/images/Footer/Logo.png";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer__top flex">
-          <div className="footer__logo">
+          <Link to="/" className="footer__logo">
             <img src={footerLogo} />
-          </div>
+          </Link>
           <p className="footer__info">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui{" "}
           </p>

@@ -48,9 +48,9 @@ function Nav({ menu, setMenu }) {
               <CiSearch />
             </button>
           </div>
-          <div className={logoClass}>
+          <Link to="/" className={logoClass}>
             <img src={logo} />
-          </div>
+          </Link>
           <div className="navtop__right flex">
             <button onClick={() => setIsVisible(true)} className={searchClass}>
               <CiSearch />
