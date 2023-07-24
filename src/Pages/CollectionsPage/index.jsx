@@ -54,6 +54,7 @@ const CollectionsPage = () => {
                   <CollectionsCard
                     image={collection.image}
                     title={collection.colTitle}
+                    id={collection.id}
                     key={collection.id}
                   />
                 );

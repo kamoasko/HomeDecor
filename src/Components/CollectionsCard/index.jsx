@@ -1,14 +1,17 @@
 import React from "react";
 import "./collections-card.css";
+import { Link } from "react-router-dom";
 
-const CollectionsCard = ({ image, title }) => {
+const CollectionsCard = ({ image, title, id }) => {
   return (
-    <div className="card">
-      <div className="card__image">
+    <article className="card">
+      <Link to={`${id}`} className="card__image">
         <img src={image} />
-      </div>
-      <div className="card__title flex">{title}</div>
-    </div>
+      </Link>
+      <Link to={`${id}`} className="card__title flex">
+        {title}
+      </Link>
+    </article>
   );
 };
 
