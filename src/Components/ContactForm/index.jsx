@@ -51,21 +51,22 @@ function ContacForm() {
 
       {isvisible && (
         <Overlay isModal={true}>
-          {" "}
-          <div className="modal">
-            <button
-              onClick={() => setIsvisible(false)}
-              className="modal__close"
-            >
-              <GrClose />
-            </button>
-            <p>THANK YOU!</p>
-            <span>
-              Your message has been received and we will contact you as soon as
-              possible.
-            </span>
-            <div className="homepage flex">
-              <Buttons text="HOME PAGE" icon={false} link="/" />
+          <div className="modal__cont">
+            <div className="modal">
+              <button
+                onClick={() => setIsvisible(false)}
+                className="modal__close"
+              >
+                <GrClose />
+              </button>
+              <p>THANK YOU!</p>
+              <span>
+                Your message has been received and we will contact you as soon
+                as possible.
+              </span>
+              <div className="homepage flex">
+                <Buttons text="HOME PAGE" icon={false} link="/" />
+              </div>
             </div>
           </div>
         </Overlay>

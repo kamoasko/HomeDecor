@@ -24,7 +24,6 @@ const Checkout = () => {
               <p className="subtitle">PAYMENT METHOD</p>
               <form className="choose">
                 <label htmlFor="card">
-                  {" "}
                   <input
                     className="choose__input"
                     type="radio"
@@ -46,7 +45,6 @@ const Checkout = () => {
               <p className="subtitle">DELIVERY METHOD</p>
               <form className="choose">
                 <label htmlFor="courier">
-                  {" "}
                   <input
                     className="choose__input"
                     type="radio"

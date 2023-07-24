@@ -26,20 +26,21 @@ const CardInfo = () => {
       </form>
       {isvisible && (
         <Overlay isModal={true}>
-          {" "}
-          <div className="modal">
-            <button
-              onClick={() => setIsvisible(false)}
-              className="modal__close"
-            >
-              <GrClose />
-            </button>
-            <p>YOUR ORDER IS COMPLETE!</p>
-            <span>
-              You will be receiving a confirmation email with order details.
-            </span>
-            <div className="homepage flex">
-              <Buttons text="HOME PAGE" icon={false} link="/" />
+          <div className="modal__cont">
+            <div className="modal">
+              <button
+                onClick={() => setIsvisible(false)}
+                className="modal__close"
+              >
+                <GrClose />
+              </button>
+              <p>YOUR ORDER IS COMPLETE!</p>
+              <span>
+                You will be receiving a confirmation email with order details.
+              </span>
+              <div className="homepage flex">
+                <Buttons text="HOME PAGE" icon={false} link="/" />
+              </div>
             </div>
           </div>
         </Overlay>

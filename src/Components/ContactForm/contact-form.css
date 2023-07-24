@@ -28,9 +28,14 @@
   width: 100%;
 }
 
+.modal__cont {
+  padding: 0 2rem;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
 .modal {
   max-width: 44.6rem;
-  /* height: max-content; */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -62,4 +67,15 @@
 
 .homepage {
   width: 21.4rem;
+}
+
+@media (max-width: 350px) {
+  .modal {
+    padding: 1.5rem;
+    row-gap: 2.6rem;
+  }
+
+  .modal p {
+    font-size: 2rem;
+  }
 }
