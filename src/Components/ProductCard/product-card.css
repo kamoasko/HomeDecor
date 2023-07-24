@@ -1,8 +1,11 @@
+.product__main {
+  position: relative;
+}
+
 .products__card {
   display: flex;
   flex-direction: column;
   row-gap: 2.2rem;
-  position: relative;
 }
 
 .favorite {
