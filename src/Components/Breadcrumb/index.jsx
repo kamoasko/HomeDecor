@@ -39,24 +39,6 @@ const Breadcrumb = ({ titleId }) => {
       )}
     </div>
   );
-
-  // return (
-  //   <div className="container">
-  //     <ol className="breadcrumb flex">
-  //       <li className="breadcrumb__link">
-  //         <NavLink to="/">Home</NavLink>
-  //       </li>
-  //       <li>&Iota;</li>
-  //       <li className="breadcrumb__link">
-  //         <NavLink to={locations[0]}>{locations[0]}</NavLink>
-  //       </li>
-  //       <li>&Iota;</li>
-  //       <li className="breadcrumb__link">
-  //         <NavLink to={useLocation().pathname}>{locations[1]}</NavLink>
-  //       </li>
-  //     </ol>
-  //   </div>
-  // );
 };
 
 export default Breadcrumb;

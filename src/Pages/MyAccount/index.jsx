@@ -1,34 +1,46 @@
 import React from "react";
 import "./my-account.css";
-import Breadcrumb from "../../Components/Breadcrumb";
 import { FaRegUser, FaUser } from "react-icons/fa";
-import { AiOutlineHeart } from "react-icons/ai";
-import { NavLink, Outlet } from "react-router-dom";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { Link, NavLink, Outlet } from "react-router-dom";
+import { useState } from "react";
 
 const MyAccount = () => {
+  const [icon, setIcon] = useState(false);
+
   return (
     <>
-      <Breadcrumb />
+      <div className="container">
+        <ol className="breadcrumb flex">
+          <li className="breadcrumb__link">
+            <Link to="/">Home</Link>
+          </li>
+          <li>&Iota;</li>
+          <li className="breadcrumb__link">
+            <div>My Account</div>
+          </li>
+        </ol>
+      </div>
       <div className="container">
         <section className="account flex">
           <div className="account__left">
             <p className="my-account">MY ACCOUNT</p>
             <ul className="account__items">
-              <li>
+              <li onClick={() => setIcon((prev) => !prev)}>
                 <NavLink
                   to="/account/personel"
                   className="account__items-list flex"
                 >
-                  <FaUser />
+                  {icon ? <FaRegUser /> : <FaUser />}
                   PERSONAL INFORMATION
                 </NavLink>
               </li>
-              <li>
+              <li onClick={() => setIcon((prev) => !prev)}>
                 <NavLink
                   to="/account/wishlist"
                   className="account__items-list flex"
                 >
-                  <AiOutlineHeart />
+                  {icon ? <AiFillHeart /> : <AiOutlineHeart />}
                   WISHLIST
                 </NavLink>
               </li>
