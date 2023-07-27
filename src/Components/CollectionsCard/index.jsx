@@ -9,7 +9,7 @@ const CollectionsCard = ({ image, title, link }) => {
         <img src={image} />
       </Link>
       <Link to={link} className="card__title flex">
-        {title}
+        {title.toUpperCase()}
       </Link>
     </article>
   );
