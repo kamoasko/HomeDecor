@@ -19,7 +19,6 @@
   top: 1.5rem;
   right: 1.5rem;
   color: var(--color-main);
-  z-index: 400;
 }
 
 .products__card-image {

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useState } from "react";
 
-function ProductCard({ productImg, productTitle, price, id }) {
+function ProductCard({ productImg, productTitle, price, id, collectionId }) {
   const [favorite, setFavorite] = useState(false);
 
   return (

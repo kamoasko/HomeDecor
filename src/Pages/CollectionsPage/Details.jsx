@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Breadcrumb from "../../Components/Breadcrumb";
-import { FaChevronDown, FaSortAmountDown } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp, FaSortAmountDown } from "react-icons/fa";
 import Pagination from "../../Components/Pagination";
 import ProductCard from "../../Components/ProductCard";
 import { useParams, Outlet } from "react-router-dom";
 
-const CollectionDetails = () => {
+const Details = () => {
   const { id } = useParams();
   const [products, setProducts] = useState([]);
   const [collections, setCollections] = useState({});
@@ -102,7 +102,7 @@ const CollectionDetails = () => {
                       className="sortby__list flex"
                     >
                       <p>CATEGORIES</p>
-                      <FaChevronDown />
+                      {category ? <FaChevronUp /> : <FaChevronDown />}
                     </div>
                     {category && (
                       <ul className="sortby__items sbi1">
@@ -177,7 +177,7 @@ const CollectionDetails = () => {
                       className="sortby__list flex"
                     >
                       <p>COLLECTIONS</p>
-                      <FaChevronDown />
+                      {collection ? <FaChevronUp /> : <FaChevronDown />}
                     </div>
                     {collection && (
                       <ul className="sortby__items">
@@ -277,6 +277,7 @@ const CollectionDetails = () => {
                       price={product.price}
                       key={product.id}
                       id={product.id}
+                      collectionId={product.collectionId}
                     />
                   );
                 })}
@@ -290,4 +291,4 @@ const CollectionDetails = () => {
   );
 };
 
-export default CollectionDetails;
+export default Details;

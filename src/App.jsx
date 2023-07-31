@@ -21,7 +21,7 @@ import Password from "./Components/AuthLayout/Password";
 import Verification from "./Components/AuthLayout/verification";
 import NewPassword from "./Components/AuthLayout/NewPassword";
 import Register from "./Components/AuthLayout/Register";
-import CollectionDetails from "./Pages/CollectionsPage/CollectionDetails";
+import Details from "./Pages/CollectionsPage/Details";
 
 function App() {
   useEffect(() => {
@@ -41,7 +41,7 @@ function App() {
 
           <Route path="collections">
             <Route index element={<CollectionsPage />} />
-            <Route path=":id" element={<CollectionDetails />} />
+            <Route path=":id" element={<Details />} />
           </Route>
           <Route path="contact" element={<ContactPage />} />
 
