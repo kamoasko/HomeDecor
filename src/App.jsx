@@ -46,7 +46,7 @@ function App() {
           <Route path="contact" element={<ContactPage />} />
 
           <Route path="account" element={<MyAccount />}>
-            <Route path="personel" element={<AccountForm />} />
+            <Route path="personal" element={<AccountForm />} />
             <Route path="wishlist" element={<WishlistCard />} />
           </Route>
           <Route path="shopping-cart" element={<ShoppingCart />} />

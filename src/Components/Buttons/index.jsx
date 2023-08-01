@@ -3,9 +3,9 @@ import "./buttons.css";
 import { Link } from "react-router-dom";
 import { BsHandbag } from "react-icons/bs";
 
-const Buttons = ({ text, icon, link }) => {
+const Buttons = ({ text, icon, link, type }) => {
   return (
-    <Link className="btn flex" to={link}>
+    <Link type={type} className="btn flex" to={link}>
       {icon ? (
         <>
           <BsHandbag />

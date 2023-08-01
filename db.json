@@ -638,5 +638,25 @@
   },
   "authentication": {
     "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/5c264b954a9d0daa1e978f01a08ad9c346aca146"
-  }
+  },
+  "users": [
+    {
+      "id": "1",
+      "fullname": "Kamran Asgarov",
+      "email": "kamranasgar0@gmail.com",
+      "password": "987654321"
+    },
+    {
+      "id": 1690893873025,
+      "fullname": "Kanan Baba",
+      "email": "kananbaba7@gmail.com",
+      "password": "123456789"
+    },
+    {
+      "id": 1690894235994,
+      "fullname": "test test",
+      "email": "test@gmail.com",
+      "password": "test123"
+    }
+  ]
 }

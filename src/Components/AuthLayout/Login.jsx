@@ -1,21 +1,62 @@
 import React, { useState } from "react";
 import { FaArrowLeft } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import Buttons from "../Buttons";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [passwordType, setPasswordType] = useState("password");
   const [passwordInput, setPasswordInput] = useState("");
+  const [emailInput, setEmailInput] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
   const handlePasswordChange = (e) => {
     setPasswordInput(e.target.value);
   };
-  const togglePassword = () => {
-    if (passwordType === "password") {
-      setPasswordType("text");
-      return;
-    }
-    setPasswordType("password");
+
+  const handleEmailChange = (e) => {
+    setEmailInput(e.target.value);
   };
+
+  const togglePassword = () => {
+    setPasswordType((prevType) =>
+      prevType === "password" ? "text" : "password"
+    );
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("http://localhost:5000/users");
+      const usersData = await res.json();
+
+      const foundUser = usersData.find(
+        (user) => user.email === emailInput && user.password === passwordInput
+      );
+
+      if (foundUser) {
+        // User information found, do login
+        navigate("/account/personal");
+        console.log("User logged in successfully!");
+        setLoading(false);
+      } else {
+        // User information not found, show error message
+        setLoading(false);
+        setError("User information was not found");
+      }
+    } catch (error) {
+      setError("Error fetching user information");
+    }
+  };
+
+  if (loading) {
+    return <h1>LOADING......</h1>;
+  }
+
+  if (error) {
+    return <h3>{error}</h3>;
+  }
 
   return (
     <div className="authentication">
@@ -27,8 +68,14 @@ const Login = () => {
       </div>
       <div className="auth__main">
         <h3>LOG IN</h3>
-        <form action="" className="auth__form">
-          <input type="email" name="" placeholder="E-MAIL ADRESS" />
+        <form onSubmit={handleSubmit} action="" className="auth__form">
+          <input
+            type="email"
+            name="email"
+            value={emailInput}
+            onChange={handleEmailChange}
+            placeholder="E-MAIL ADDRESS"
+          />
           <div className="password account__inp flex">
             <input
               type={passwordType}
@@ -73,10 +120,13 @@ const Login = () => {
               )}
             </span>
           </div>
+          {error && <p style={{ color: "red" }}>{error}</p>}
           <Link to="/auth/password" className="auth__form-link">
             Forgot password?
           </Link>
-          <Buttons text="LOG IN" link="/account/personel" />
+          <button className="btn flex" type="submit">
+            LOG IN
+          </button>
         </form>
       </div>
       <div className="auth__last flex">
