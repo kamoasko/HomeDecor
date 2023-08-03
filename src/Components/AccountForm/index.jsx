@@ -39,7 +39,6 @@ const AccountForm = () => {
       email: email,
       password: passwordInput ? passwordInput : prevUser.password,
     }));
-    console.log(user);
     // Save the updated user information in local storage
     localStorage.setItem(
       "user",
