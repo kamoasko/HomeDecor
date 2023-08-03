@@ -42,6 +42,8 @@
 
 .ail {
   margin-top: 3rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .account__right {

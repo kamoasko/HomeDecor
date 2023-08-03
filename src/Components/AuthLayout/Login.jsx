@@ -34,6 +34,7 @@ const Login = () => {
       const foundUser = usersData.find((person) => {
         if (person.email == emailInput && person.password == passwordInput) {
           localStorage.setItem("user", JSON.stringify(person));
+          localStorage.setItem("isLogged", true);
           return person;
         } else {
           return false;

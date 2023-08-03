@@ -1,6 +1,6 @@
 import React from "react";
 import "./auth-layout.css";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Nav from "../../Components/Nav";
 import Footer from "../../Components/Footer";
@@ -9,6 +9,8 @@ const AuthLayout = () => {
   const [auth, setAuth] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const navigate = useNavigate();
+
   const isMobile = window.innerWidth <= 768;
 
   const getAuth = async () => {
@@ -29,6 +31,11 @@ const AuthLayout = () => {
   };
 
   useEffect(() => {
+    if (localStorage.getItem("isLogged")) {
+      navigate("/account/personal");
+    } else {
+      navigate("/auth/login");
+    }
     getAuth();
   }, []);
 

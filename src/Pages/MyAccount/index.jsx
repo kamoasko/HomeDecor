@@ -2,11 +2,23 @@ import React from "react";
 import "./my-account.css";
 import { FaRegUser, FaUser } from "react-icons/fa";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import { Link, NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const MyAccount = () => {
   const [icon, setIcon] = useState(false);
+  let navigate = useNavigate();
+  let LoggedOut = () => {
+    localStorage.clear();
+    navigate("/auth/login");
+  };
+
+  useEffect(() => {
+    if (!localStorage.getItem("isLogged")) {
+      navigate("/auth/login");
+    }
+  }, []);
 
   return (
     <>
@@ -45,7 +57,10 @@ const MyAccount = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink className="account__items-list ail flex">
+                <div
+                  onClick={LoggedOut}
+                  className="account__items-list ail flex"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -68,7 +83,7 @@ const MyAccount = () => {
                     />
                   </svg>
                   LOG OUT
-                </NavLink>
+                </div>
               </li>
             </ul>
           </div>
