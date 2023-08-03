@@ -3,12 +3,25 @@ import "./account-form.css";
 import Buttons from "../Buttons";
 
 const AccountForm = () => {
-  const [passwordType, setPasswordType] = useState("password");
-  const [passwordInput, setPasswordInput] = useState("");
-  const handlePasswordChange = (e) => {
+  let [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
+  let [passwordType, setPasswordType] = useState("password");
+  let [passwordInput, setPasswordInput] = useState("");
+  let [fullname, setFullname] = useState(
+    localStorage.getItem("user")
+      ? JSON.parse(localStorage.getItem("user")).fullname
+      : ""
+  );
+  let [email, setEmail] = useState(
+    localStorage.getItem("user")
+      ? JSON.parse(localStorage.getItem("user")).email
+      : ""
+  );
+
+  let handlePasswordChange = (e) => {
     setPasswordInput(e.target.value);
   };
-  const togglePassword = () => {
+
+  let togglePassword = () => {
     if (passwordType === "password") {
       setPasswordType("text");
       return;
@@ -16,22 +29,89 @@ const AccountForm = () => {
     setPasswordType("password");
   };
 
+  const handleSaveChanges = (e) => {
+    e.preventDefault();
+
+    // Update the user information
+    setUser((prevUser) => ({
+      ...prevUser,
+      fullname: fullname,
+      email: email,
+      password: passwordInput ? passwordInput : prevUser.password,
+    }));
+    console.log(user);
+    // Save the updated user information in local storage
+    localStorage.setItem(
+      "user",
+      JSON.stringify({
+        id: user.id,
+        fullname: fullname,
+        email: email,
+        password: passwordInput ? passwordInput : prevUser.password,
+      })
+    );
+
+    // updated user information to the server
+    fetch("http://localhost:5000/users/" + user.id, {
+      method: "PUT",
+      body: JSON.stringify({
+        id: user.id,
+        fullname: fullname,
+        email: email,
+        password: passwordInput ? passwordInput : prevUser.password,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    // alert("Changes saved successfully!");
+  };
+
+  if (!user) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
-    <form action="" className="account__form">
+    <form
+      action=""
+      onSubmit={(e) => {
+        handleSaveChanges(e);
+      }}
+      className="account__form"
+    >
       <div className="account__inp">
-        <input type="text" name="" placeholder="NAME" />
+        <input
+          type="text"
+          name="name"
+          placeholder="NAME"
+          defaultValue={user.fullname}
+          onInput={(e) => setFullname(e.target.value)}
+        />
       </div>
       <div className="account__inp">
-        <input type="text" name="" placeholder="SURNAME" />
+        <input
+          type="text"
+          name="surname"
+          placeholder="SURNAME"
+          defaultValue={user.fullname}
+          onInput={(e) => setFullname(e.target.value)}
+        />
       </div>
       <div className="account__inp">
-        <input type="email" name="" placeholder="youremailhere@gmail.com" />
+        <input
+          type="email"
+          name="email"
+          placeholder="youremailhere@gmail.com"
+          defaultValue={user.email}
+          onInput={(e) => setEmail(e.target.value)}
+        />
       </div>
       <div className="password account__inp flex">
         <input
           type={passwordType}
-          onChange={handlePasswordChange}
-          value={passwordInput}
+          onInput={handlePasswordChange}
+          defaultValue={(passwordInput = user.password)}
           name="password"
           placeholder="PASSWORD"
         />
@@ -72,7 +152,9 @@ const AccountForm = () => {
         </span>
       </div>
       <div className="account__btn">
-        <Buttons text="SAVE CHANGES" icon={false} link="/account/personel" />
+        <button className="btn flex" type="sumbit">
+          SAVE CHANGES
+        </button>
       </div>
     </form>
   );

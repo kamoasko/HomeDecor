@@ -31,9 +31,14 @@ const Login = () => {
       const res = await fetch("http://localhost:5000/users");
       const usersData = await res.json();
 
-      const foundUser = usersData.find(
-        (user) => user.email === emailInput && user.password === passwordInput
-      );
+      const foundUser = usersData.find((person) => {
+        if (person.email == emailInput && person.password == passwordInput) {
+          localStorage.setItem("user", JSON.stringify(person));
+          return person;
+        } else {
+          return false;
+        }
+      });
 
       if (foundUser) {
         // User information found, do login
@@ -43,7 +48,7 @@ const Login = () => {
       } else {
         // User information not found, show error message
         setLoading(false);
-        setError("User information was not found");
+        setError("Email or password is invalid!");
       }
     } catch (error) {
       setError("Error fetching user information");
@@ -52,10 +57,6 @@ const Login = () => {
 
   if (loading) {
     return <h1>LOADING......</h1>;
-  }
-
-  if (error) {
-    return <h3>{error}</h3>;
   }
 
   return (
@@ -120,7 +121,7 @@ const Login = () => {
               )}
             </span>
           </div>
-          {error && <p style={{ color: "red" }}>{error}</p>}
+          {error && <span style={{ color: "red" }}>{error}</span>}
           <Link to="/auth/password" className="auth__form-link">
             Forgot password?
           </Link>

@@ -2,7 +2,7 @@ import React from "react";
 import "./personel-info.css";
 
 const PersonelInfo = () => {
-  return (
+    return (
     <>
       <p className="subtitle">PERSONAL INFORMATION</p>
       <div className="personel__form flex">

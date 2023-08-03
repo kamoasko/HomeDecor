@@ -28,7 +28,7 @@ const MyAccount = () => {
             <ul className="account__items">
               <li onClick={() => setIcon((prev) => !prev)}>
                 <NavLink
-                  to="/account/personel"
+                  to="/account/personal"
                   className="account__items-list flex"
                 >
                   {icon ? <FaRegUser /> : <FaUser />}
