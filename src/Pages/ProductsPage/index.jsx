@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./products-page.css";
 import Breadcrumb from "../../Components/Breadcrumb";
-import { FaChevronDown, FaSortAmountDown } from "react-icons/fa";
+import { FaChevronDown, FaChevronUp, FaSortAmountDown } from "react-icons/fa";
 import ProductCard from "../../Components/ProductCard";
 import Pagination from "../../Components/Pagination";
 
@@ -83,7 +83,7 @@ function ProductsPage() {
                       className="sortby__list flex"
                     >
                       <p>CATEGORIES</p>
-                      <FaChevronDown />
+                      {category ? <FaChevronUp /> : <FaChevronDown />}
                     </div>
                     {category && (
                       <ul className="sortby__items sbi1">
@@ -158,7 +158,7 @@ function ProductsPage() {
                       className="sortby__list flex"
                     >
                       <p>COLLECTIONS</p>
-                      <FaChevronDown />
+                      {collection ? <FaChevronUp /> : <FaChevronDown />}
                     </div>
                     {collection && (
                       <ul className="sortby__items">
