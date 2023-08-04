@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaArrowLeft } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [loading, setLoading] = useState(false);
@@ -8,6 +8,7 @@ const Register = () => {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,6 +34,7 @@ const Register = () => {
         // Data added successfully
         setLoading(false);
         console.log("Data added successfully!");
+        navigate("/auth/login");
       } else {
         // Handle errors if the request fails
         setLoading(false);
