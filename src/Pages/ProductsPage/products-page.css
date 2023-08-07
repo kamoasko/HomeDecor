@@ -58,6 +58,10 @@
   z-index: 500;
 }
 
+.sort__filter > li {
+  cursor: pointer;
+}
+
 .product__content {
   margin-top: 5.4rem;
   display: grid;

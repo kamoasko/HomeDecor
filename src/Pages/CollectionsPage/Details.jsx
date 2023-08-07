@@ -66,7 +66,7 @@ const Details = () => {
       <section className="product ">
         <div className="container">
           <div className="product__title flex">
-            <h2>{collections.colTitle}</h2>
+            <h2>{collections.colTitle.toUpperCase()}</h2>
           </div>
           <div className="product__sorting">
             <p className="product__sorting-info">

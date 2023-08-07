@@ -12,6 +12,11 @@ function ProductsPage() {
   const [category, setCategory] = useState(false);
   const [collection, setCollection] = useState(false);
   const [sort, setSort] = useState(false);
+  const [activeCondition, setActiveCondition] = useState("SORT BY");
+  const [selectedCollectionId, setSelectedCollectionId] = useState(null);
+  const [selectedCategoryId, setSelectedCategoryId] = useState(null);
+  const [collectionsData, setCollectionsData] = useState([]);
+  const [categoriesData, setCategoriesData] = useState([]);
 
   const getProducts = async () => {
     try {
@@ -29,7 +34,104 @@ function ProductsPage() {
     }
   };
 
+  // Fetch collections data
+  const getCollectionsData = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/collections");
+      if (res.ok) {
+        const data = await res.json();
+        setCollectionsData(data);
+      } else {
+        throw Error("Failed to fetch collections data!");
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
+  // Fetch categories data
+  const getCategoriesData = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/categories");
+      if (res.ok) {
+        const data = await res.json();
+        setCategoriesData(data);
+      } else {
+        throw Error("Failed to fetch categories data!");
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
+  const filterProducts = (products) => {
+    let filteredProducts = [...products];
+
+    if (selectedCollectionId) {
+      filteredProducts = filteredProducts.filter(
+        (product) => product.collectionId == selectedCollectionId
+      );
+    }
+
+    if (selectedCategoryId) {
+      filteredProducts = filteredProducts.filter(
+        (product) => product.categoriesId == selectedCategoryId
+      );
+    }
+
+    return filteredProducts;
+  };
+
+  const changeSortList = (e) => {
+    const getProductsData = async (q) => {
+      try {
+        const res = await fetch("http://localhost:5000/products?_sort=" + q);
+        if (res.ok) {
+          const data = await res.json();
+          setProducts(() => data);
+          setLoading(false);
+        } else {
+          setLoading(false);
+          throw Error("Network error!!!");
+        }
+      } catch (e) {
+        setError(() => e.message);
+      }
+    };
+    setActiveCondition(e.target.textContent);
+    let id = e.target.getAttribute("dataid");
+    if (id == 1) {
+      getProductsData("views");
+    } else if (id == 2) {
+      getProductsData("price");
+    } else if (id == 3) {
+      getProductsData("price&_order=desc");
+    } else {
+      alert("Invalid Data!!!");
+    }
+  };
+
+  let filteredProducts = filterProducts(products);
+
+  // Handle checkbox input changes for collections
+  const handleCollectionChange = (event) => {
+    const collectionId = event.target.value;
+    setSelectedCollectionId((prevId) =>
+      prevId == collectionId ? null : collectionId
+    );
+  };
+
+  // Handle checkbox input changes for categories
+  const handleCategoryChange = (event) => {
+    const categoryId = event.target.value;
+    setSelectedCategoryId((prevId) =>
+      prevId == categoryId ? null : categoryId
+    );
+  };
+
   useEffect(() => {
+    getCollectionsData();
+    getCategoriesData();
     getProducts();
   }, []);
 
@@ -61,13 +163,19 @@ function ProductsPage() {
                 className="sort flex"
               >
                 <FaSortAmountDown />
-                SORT BY
+                {activeCondition}
               </button>
               {sort && (
                 <ul className="sort__filter">
-                  <li>POPULAR FIRST</li>
-                  <li>CHEAPEST FIRST</li>
-                  <li>EXPENSIVE FIRST</li>
+                  <li dataid={1} onClick={(e) => changeSortList(e)}>
+                    POPULAR FIRST
+                  </li>
+                  <li dataid={2} onClick={(e) => changeSortList(e)}>
+                    CHEAPEST FIRST
+                  </li>
+                  <li dataid={3} onClick={(e) => changeSortList(e)}>
+                    EXPENSIVE FIRST
+                  </li>
                 </ul>
               )}
             </div>
@@ -90,61 +198,26 @@ function ProductsPage() {
                         <li className="sortby__items-list">
                           <input
                             type="checkbox"
-                            name=""
                             className="categories__inp"
+                            checked={true}
                           />
-                          <label htmlFor="">ALL</label>
+                          <label htmlFor="ALL">ALL</label>
                         </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="SOFAS"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="SOFAS">SOFAS</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="BEDS AND HEADBOARDS"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="BEDS AND HEADBOARDS">
-                            BEDS AND HEADBOARDS
-                          </label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="RUGS"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="RUGS">RUGS</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="CUSHIONS"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="CUSHIONS">CUSHIONS</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="SOFAS"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="SOFAS">SOFAS</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="HEADBOARDS"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="HEADBOARDS">HEADBOARDS</label>
-                        </li>
+                        {categoriesData.map((category) => (
+                          <li key={category.id} className="sortby__items-list">
+                            <input
+                              type="checkbox"
+                              name={category.catTitle}
+                              value={category.id}
+                              className="categories__inp"
+                              checked={selectedCategoryId == category.id}
+                              onChange={handleCategoryChange}
+                            />
+                            <label htmlFor={category.id}>
+                              {category.catTitle}
+                            </label>
+                          </li>
+                        ))}
                       </ul>
                     )}
                   </div>
@@ -165,83 +238,29 @@ function ProductsPage() {
                         <li className="sortby__items-list">
                           <input
                             type="checkbox"
-                            name="ALL"
                             className="categories__inp"
+                            checked={true}
                           />
                           <label htmlFor="ALL">ALL</label>
                         </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="BEDROOM"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="BEDROOM">BEDROOM</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="LIVING ROOM"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="LIVING ROOM">LIVING ROOM</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="KITCHEN"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="KITCHEN">KITCHEN</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="LIBRARY"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="LIBRARY">LIBRARY</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="OFFICE"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="OFFICE">OFFICE</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="LAUNDRY ROOM"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="LAUNDRY ROOM">LAUNDRY ROOM</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="GUEST ROOM"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="GUEST ROOM">GUEST ROOM</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="FAMILY ROOM"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="FAMILY ROOM">FAMILY ROOM</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="BATHROOM"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="BATHROOM">BATHROOM</label>
-                        </li>
+                        {collectionsData.map((collection) => (
+                          <li
+                            key={collection.id}
+                            className="sortby__items-list"
+                          >
+                            <input
+                              type="checkbox"
+                              name={collection.colTitle}
+                              value={collection.id}
+                              className="categories__inp"
+                              checked={selectedCollectionId == collection.id}
+                              onChange={handleCollectionChange}
+                            />
+                            <label htmlFor={collection.id}>
+                              {collection.colTitle.toUpperCase()}
+                            </label>
+                          </li>
+                        ))}
                       </ul>
                     )}
                   </div>
@@ -249,18 +268,19 @@ function ProductsPage() {
               </ul>
             </div>
             <div className="product__content-right">
-              {products.length &&
-                products.map((product) => {
-                  return (
-                    <ProductCard
-                      productImg={product.image}
-                      productTitle={product.title}
-                      price={product.price}
-                      key={product.id}
-                      id={product.id}
-                    />
-                  );
-                })}
+              {filteredProducts.length ? (
+                filteredProducts.map((product) => (
+                  <ProductCard
+                    productImg={product.image}
+                    productTitle={product.title}
+                    price={product.price}
+                    key={product.id}
+                    id={product.id}
+                  />
+                ))
+              ) : (
+                <p>No products found.</p>
+              )}
             </div>
           </div>
           <Pagination />
