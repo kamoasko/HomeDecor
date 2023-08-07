@@ -17,6 +17,8 @@ function ProductsPage() {
   const [selectedCategoryId, setSelectedCategoryId] = useState(null);
   const [collectionsData, setCollectionsData] = useState([]);
   const [categoriesData, setCategoriesData] = useState([]);
+  const [isCatAll, setIsCatAll] = useState(true);
+  const [isColAll, setIsColAll] = useState(true);
 
   const getProducts = async () => {
     try {
@@ -67,16 +69,24 @@ function ProductsPage() {
   const filterProducts = (products) => {
     let filteredProducts = [...products];
 
-    if (selectedCollectionId) {
-      filteredProducts = filteredProducts.filter(
-        (product) => product.collectionId == selectedCollectionId
-      );
+    if (selectedCategoryId == 0) {
+      return filteredProducts;
+    } else {
+      if (selectedCategoryId) {
+        filteredProducts = filteredProducts.filter(
+          (product) => product.categoriesId == selectedCategoryId
+        );
+      }
     }
 
-    if (selectedCategoryId) {
-      filteredProducts = filteredProducts.filter(
-        (product) => product.categoriesId == selectedCategoryId
-      );
+    if (selectedCollectionId == 0) {
+      return filteredProducts;
+    } else {
+      if (selectedCollectionId) {
+        filteredProducts = filteredProducts.filter(
+          (product) => product.collectionId == selectedCollectionId
+        );
+      }
     }
 
     return filteredProducts;
@@ -113,20 +123,22 @@ function ProductsPage() {
 
   let filteredProducts = filterProducts(products);
 
-  // Handle checkbox input changes for collections
-  const handleCollectionChange = (event) => {
-    const collectionId = event.target.value;
-    setSelectedCollectionId((prevId) =>
-      prevId == collectionId ? null : collectionId
-    );
-  };
-
   // Handle checkbox input changes for categories
   const handleCategoryChange = (event) => {
     const categoryId = event.target.value;
     setSelectedCategoryId((prevId) =>
       prevId == categoryId ? null : categoryId
     );
+    setIsCatAll(false);
+  };
+
+  // Handle checkbox input changes for collections
+  const handleCollectionChange = (event) => {
+    const collectionId = event.target.value;
+    setSelectedCollectionId((prevId) =>
+      prevId == collectionId ? null : collectionId
+    );
+    setIsColAll(false);
   };
 
   useEffect(() => {
@@ -199,7 +211,11 @@ function ProductsPage() {
                           <input
                             type="checkbox"
                             className="categories__inp"
-                            checked={true}
+                            checked={isCatAll ? true : false}
+                            onChange={() => {
+                              setIsCatAll((prev) => !prev);
+                              setSelectedCategoryId(0);
+                            }}
                           />
                           <label htmlFor="ALL">ALL</label>
                         </li>
@@ -239,7 +255,11 @@ function ProductsPage() {
                           <input
                             type="checkbox"
                             className="categories__inp"
-                            checked={true}
+                            checked={isColAll ? true : false}
+                            onChange={() => {
+                              setIsColAll((prev) => !prev);
+                              setSelectedCollectionId(0);
+                            }}
                           />
                           <label htmlFor="ALL">ALL</label>
                         </li>
