@@ -3,7 +3,7 @@ import Breadcrumb from "../../Components/Breadcrumb";
 import { FaChevronDown, FaChevronUp, FaSortAmountDown } from "react-icons/fa";
 import Pagination from "../../Components/Pagination";
 import ProductCard from "../../Components/ProductCard";
-import { useParams, Outlet } from "react-router-dom";
+import { useParams, Outlet, useNavigate } from "react-router-dom";
 
 const Details = () => {
   const { id } = useParams();
@@ -14,10 +14,19 @@ const Details = () => {
   const [category, setCategory] = useState(false);
   const [collection, setCollection] = useState(false);
   const [sort, setSort] = useState(false);
+  const [activeCondition, setActiveCondition] = useState("SORT BY");
+  const [selectedCollectionId, setSelectedCollectionId] = useState(null);
+  const [selectedCategoryId, setSelectedCategoryId] = useState(null);
+  const [collectionsData, setCollectionsData] = useState([]);
+  const [categoriesData, setCategoriesData] = useState([]);
+  const [isCatAll, setIsCatAll] = useState(true);
+  const [isColAll, setIsColAll] = useState(false);
+  const navigate = useNavigate();
 
   const getCollections = async () => {
+    const url = "http://localhost:5000/collections/";
     try {
-      const res1 = await fetch(`http://localhost:5000/collections/${id}`);
+      const res1 = await fetch(url + id);
       if (res1.ok) {
         const data1 = await res1.json();
         setCollections(() => data1);
@@ -36,7 +45,7 @@ const Details = () => {
       const res = await fetch("http://localhost:5000/products");
       if (res.ok) {
         const data = await res.json();
-        setProducts(() => data);
+        setProducts(() => data.filter((item) => item.collectionId == id));
         setLoading(false);
       } else {
         setLoading(false);
@@ -47,9 +56,129 @@ const Details = () => {
     }
   };
 
+  // Fetch collections data
+  const getCollectionsData = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/collections");
+      if (res.ok) {
+        const data = await res.json();
+        setCollectionsData(data);
+      } else {
+        throw Error("Failed to fetch collections data!");
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
+  // Fetch categories data
+  const getCategoriesData = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/categories");
+      if (res.ok) {
+        const data = await res.json();
+        setCategoriesData(data);
+      } else {
+        throw Error("Failed to fetch categories data!");
+      }
+    } catch (error) {
+      console.error(error.message);
+    }
+  };
+
+  const filterProducts = (products) => {
+    let filteredProducts = [...products];
+
+    if (selectedCategoryId == 0) {
+      return filteredProducts;
+    } else {
+      if (selectedCategoryId) {
+        filteredProducts = filteredProducts.filter(
+          (product) => product.categoriesId == selectedCategoryId
+        );
+      }
+    }
+
+    if (selectedCollectionId == 0) {
+      return filteredProducts;
+    } else {
+      if (selectedCollectionId) {
+        filteredProducts = filteredProducts.filter(
+          (product) => product.collectionId == selectedCollectionId
+        );
+      }
+    }
+
+    return filteredProducts;
+  };
+
+  const changeSortList = (e) => {
+    const getProductsData = async (q) => {
+      try {
+        const res = await fetch("http://localhost:5000/products?_sort=" + q);
+        if (res.ok) {
+          const data = await res.json();
+          setProducts(() => data);
+          setLoading(false);
+        } else {
+          setLoading(false);
+          throw Error("Network error!!!");
+        }
+      } catch (e) {
+        setError(() => e.message);
+      }
+    };
+    setActiveCondition(e.target.textContent);
+    let id = e.target.getAttribute("dataid");
+    if (id == 1) {
+      getProductsData("views");
+    } else if (id == 2) {
+      getProductsData("price");
+    } else if (id == 3) {
+      getProductsData("price&_order=desc");
+    } else {
+      alert("Invalid Data!!!");
+    }
+  };
+
+  let filteredProducts = filterProducts(products);
+
+  // Handle checkbox input changes for categories
+  const handleCategoryChange = (event) => {
+    const categoryId = event.target.value;
+    setSelectedCategoryId((prevId) =>
+      prevId == categoryId ? null : categoryId
+    );
+    setIsCatAll(false);
+    if (!event.target.checked) {
+      setIsCatAll(true);
+    }
+  };
+
+  // Handle checkbox input changes for collections
+  const handleCollectionChange = (event) => {
+    const collectionId = event.target.value;
+
+    setSelectedCollectionId((prevId) =>
+      prevId == collectionId ? null : collectionId
+    );
+    setIsColAll(false);
+
+    if (!event.target.checked) {
+      setIsColAll(true);
+    }
+
+    if (id) {
+      navigate("/collections/" + collectionId);
+    }
+  };
+
   useEffect(() => {
     getProducts();
     getCollections();
+    getCollectionsData();
+    getCategoriesData();
+    setSelectedCollectionId(id);
   }, [id]);
 
   if (loading) {
@@ -66,7 +195,7 @@ const Details = () => {
       <section className="product ">
         <div className="container">
           <div className="product__title flex">
-            <h2>{collections.colTitle.toUpperCase()}</h2>
+            <h2>{collections.colTitle}</h2>
           </div>
           <div className="product__sorting">
             <p className="product__sorting-info">
@@ -80,13 +209,19 @@ const Details = () => {
                 className="sort flex"
               >
                 <FaSortAmountDown />
-                SORT BY
+                {activeCondition}
               </button>
               {sort && (
                 <ul className="sort__filter">
-                  <li>POPULAR FIRST</li>
-                  <li>CHEAPEST FIRST</li>
-                  <li>EXPENSIVE FIRST</li>
+                  <li dataid={1} onClick={(e) => changeSortList(e)}>
+                    POPULAR FIRST
+                  </li>
+                  <li dataid={2} onClick={(e) => changeSortList(e)}>
+                    CHEAPEST FIRST
+                  </li>
+                  <li dataid={3} onClick={(e) => changeSortList(e)}>
+                    EXPENSIVE FIRST
+                  </li>
                 </ul>
               )}
             </div>
@@ -109,61 +244,30 @@ const Details = () => {
                         <li className="sortby__items-list">
                           <input
                             type="checkbox"
-                            name=""
                             className="categories__inp"
+                            checked={isCatAll}
+                            onChange={() => {
+                              setIsCatAll((prev) => !prev);
+                              setSelectedCategoryId(0);
+                            }}
                           />
-                          <label htmlFor="">ALL</label>
+                          <label htmlFor="ALL">ALL</label>
                         </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="SOFAS"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="SOFAS">SOFAS</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="BEDS AND HEADBOARDS"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="BEDS AND HEADBOARDS">
-                            BEDS AND HEADBOARDS
-                          </label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="RUGS"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="RUGS">RUGS</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="CUSHIONS"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="CUSHIONS">CUSHIONS</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="SOFAS"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="SOFAS">SOFAS</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="HEADBOARDS"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="HEADBOARDS">HEADBOARDS</label>
-                        </li>
+                        {categoriesData.map((category) => (
+                          <li key={category.id} className="sortby__items-list">
+                            <input
+                              type="checkbox"
+                              name={category.catTitle}
+                              value={category.id}
+                              className="categories__inp"
+                              checked={selectedCategoryId == category.id}
+                              onChange={handleCategoryChange}
+                            />
+                            <label htmlFor={category.id}>
+                              {category.catTitle}
+                            </label>
+                          </li>
+                        ))}
                       </ul>
                     )}
                   </div>
@@ -184,83 +288,33 @@ const Details = () => {
                         <li className="sortby__items-list">
                           <input
                             type="checkbox"
-                            name="ALL"
                             className="categories__inp"
+                            checked={isColAll}
+                            onChange={() => {
+                              setIsColAll((prev) => !prev);
+                              setSelectedCollectionId(0);
+                            }}
                           />
                           <label htmlFor="ALL">ALL</label>
                         </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="BEDROOM"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="BEDROOM">BEDROOM</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="LIVING ROOM"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="LIVING ROOM">LIVING ROOM</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="KITCHEN"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="KITCHEN">KITCHEN</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="LIBRARY"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="LIBRARY">LIBRARY</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="OFFICE"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="OFFICE">OFFICE</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="LAUNDRY ROOM"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="LAUNDRY ROOM">LAUNDRY ROOM</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="GUEST ROOM"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="GUEST ROOM">GUEST ROOM</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="FAMILY ROOM"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="FAMILY ROOM">FAMILY ROOM</label>
-                        </li>
-                        <li className="sortby__items-list">
-                          <input
-                            type="checkbox"
-                            name="BATHROOM"
-                            className="categories__inp"
-                          />
-                          <label htmlFor="BATHROOM">BATHROOM</label>
-                        </li>
+                        {collectionsData.map((collection) => (
+                          <li
+                            key={collection.id}
+                            className="sortby__items-list"
+                          >
+                            <input
+                              type="checkbox"
+                              name={collection.colTitle}
+                              value={collection.id}
+                              className="categories__inp"
+                              checked={selectedCollectionId == collection.id}
+                              onChange={handleCollectionChange}
+                            />
+                            <label htmlFor={collection.id}>
+                              {collection.colTitle.toUpperCase()}
+                            </label>
+                          </li>
+                        ))}
                       </ul>
                     )}
                   </div>
@@ -268,19 +322,19 @@ const Details = () => {
               </ul>
             </div>
             <div className="product__content-right">
-              {products.length &&
-                products.map((product) => {
-                  return (
-                    <ProductCard
-                      productImg={product.image}
-                      productTitle={product.title}
-                      price={product.price}
-                      key={product.id}
-                      id={product.id}
-                      collectionId={product.collectionId}
-                    />
-                  );
-                })}
+              {filteredProducts.length ? (
+                filteredProducts.map((product) => (
+                  <ProductCard
+                    productImg={product.image}
+                    productTitle={product.title}
+                    price={product.price}
+                    key={product.id}
+                    id={product.id}
+                  />
+                ))
+              ) : (
+                <p>No products found.</p>
+              )}
             </div>
           </div>
           <Pagination />

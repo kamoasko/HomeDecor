@@ -130,15 +130,23 @@ function ProductsPage() {
       prevId == categoryId ? null : categoryId
     );
     setIsCatAll(false);
+    if (!event.target.checked) {
+      setIsCatAll(true);
+    }
   };
 
   // Handle checkbox input changes for collections
   const handleCollectionChange = (event) => {
     const collectionId = event.target.value;
+
     setSelectedCollectionId((prevId) =>
       prevId == collectionId ? null : collectionId
     );
     setIsColAll(false);
+
+    if (!event.target.checked) {
+      setIsColAll(true);
+    }
   };
 
   useEffect(() => {
@@ -211,7 +219,7 @@ function ProductsPage() {
                           <input
                             type="checkbox"
                             className="categories__inp"
-                            checked={isCatAll ? true : false}
+                            checked={isCatAll}
                             onChange={() => {
                               setIsCatAll((prev) => !prev);
                               setSelectedCategoryId(0);
@@ -255,7 +263,7 @@ function ProductsPage() {
                           <input
                             type="checkbox"
                             className="categories__inp"
-                            checked={isColAll ? true : false}
+                            checked={isColAll}
                             onChange={() => {
                               setIsColAll((prev) => !prev);
                               setSelectedCollectionId(0);
