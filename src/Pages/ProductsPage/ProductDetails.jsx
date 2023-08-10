@@ -7,6 +7,7 @@ import SectionTitle from "../../Components/SectionTitle";
 import ProductCount from "../../Components/ProductCount";
 import { Outlet, useParams } from "react-router-dom";
 import SimilarSlider from "./SimilarSlider";
+import { BsCart2 } from "react-icons/bs";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -27,6 +28,39 @@ const ProductDetails = () => {
       }
     } catch (e) {
       setError(() => e.message);
+    }
+  };
+
+  const addToCart = async () => {
+    let newData = {
+      id: id,
+      image: products.image,
+      title: products.title,
+      desc: products.desc,
+      price: products.price,
+    };
+
+    try {
+      setLoading(true);
+      const res = await fetch("http://localhost:5000/cart", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newData),
+      });
+
+      if (res.ok) {
+        // Data added successfully
+        setLoading(false);
+        console.log("Data added successfully!");
+      } else {
+        // Handle errors if the request fails
+        setLoading(false);
+        throw new Error("Failed to add data!!!");
+      }
+    } catch (error) {
+      setError(error.message);
     }
   };
 
@@ -75,7 +109,9 @@ const ProductDetails = () => {
             <h3>{products.price}</h3>
             <div className="details__btns flex">
               <Buttons text="BUY NOW" icon={true} link="/checkout" />
-              <SecondaryButtons text="ADD TO CART" icon={true} />
+              <button onClick={addToCart} className="btn1 flex">
+                <BsCart2 /> ADD TO CART
+              </button>
             </div>
           </div>
         </section>
