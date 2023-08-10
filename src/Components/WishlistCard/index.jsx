@@ -23,7 +23,6 @@ const WishlistCard = ({
       if (res.ok) {
         // Data removed successfully
         setLoading(false);
-        console.log("Data removed successfully!");
         removeFromFavorites(id);
       } else {
         // Handle errors if the request fails
