@@ -1,4 +1,5 @@
 .account {
+  display: flex;
   margin-top: 4.9rem;
   column-gap: 13.7rem;
 }
@@ -18,6 +19,7 @@
   background-color: rgba(212, 200, 190, 0.5);
   padding: 4rem 6rem 5rem 3rem;
   max-width: 33rem;
+  height: max-content;
 }
 
 .account__items {

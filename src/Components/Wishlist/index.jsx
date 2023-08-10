@@ -38,7 +38,7 @@ const Wishlist = () => {
 
   return (
     <>
-      {favorites.length > 0 &&
+      {favorites.length > 0 ? (
         favorites.map((favorite) => (
           <WishlistCard
             productImg={favorite.image}
@@ -48,7 +48,10 @@ const Wishlist = () => {
             key={favorite.id}
             removeFromFavorites={removeFromFavorites}
           />
-        ))}
+        ))
+      ) : (
+        <p>There is no products in the wishlist</p>
+      )}
     </>
   );
 };

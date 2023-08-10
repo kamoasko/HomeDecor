@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./wishlist-card.css";
-import wishlist from "../../assets/images/Wishlist/wishlist.png";
 import { AiFillHeart } from "react-icons/ai";
 
 const WishlistCard = ({

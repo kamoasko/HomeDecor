@@ -32,7 +32,7 @@ const MyAccount = () => {
         </ol>
       </div>
       <div className="container">
-        <section className="account flex">
+        <section className="account">
           <div className="account__left">
             <p className="my-account">MY ACCOUNT</p>
             <ul className="account__items">

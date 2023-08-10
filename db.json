@@ -711,5 +711,18 @@
       "password": "321"
     }
   ],
-  "favorites": []
+  "favorites": [
+    {
+      "id": 12,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
+      "title": "Elegant Dressing Table",
+      "price": "480$"
+    },
+    {
+      "id": 17,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
+      "title": "Modern Bar Stool",
+      "price": "180$"
+    }
+  ]
 }
