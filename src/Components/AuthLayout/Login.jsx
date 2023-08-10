@@ -20,7 +20,7 @@ const Login = () => {
 
   const togglePassword = () => {
     setPasswordType((prevType) =>
-      prevType === "password" ? "text" : "password"
+      prevType == "password" ? "text" : "password"
     );
   };
 
@@ -44,7 +44,7 @@ const Login = () => {
       if (foundUser) {
         // User information found, do login
         navigate("/account/personal");
-        console.log("User logged in successfully!");
+        // console.log("User logged in successfully!");
         setLoading(false);
       } else {
         // User information not found, show error message

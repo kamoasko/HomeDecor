@@ -88,7 +88,7 @@ const MostPopularSlider = () => {
               <ProductCard
                 productImg={popular.image}
                 productTitle={popular.title}
-                price={popular.price}
+                productPrice={popular.price}
                 id={popular.id}
                 key={popular.id}
               />

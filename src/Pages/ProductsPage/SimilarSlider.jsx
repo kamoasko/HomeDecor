@@ -85,7 +85,7 @@ const SimilarSlider = () => {
               <ProductCard
                 productImg={product.image}
                 productTitle={product.title}
-                price={product.price}
+                productPrice={product.price}
                 key={product.id}
                 id={product.id}
               />
