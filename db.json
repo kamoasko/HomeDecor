@@ -727,11 +727,25 @@
   ],
   "cart": [
     {
-      "id": "6",
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dee2eb1391d11c1e5ecc902a0c6592f4c16d3abb",
-      "title": "Cozy Armchair",
-      "desc": "Indulge in comfort and relaxation with this cozy armchair. Its plush cushions and ergonomic design make it the perfect spot for unwinding after a long day. Add a touch of coziness to your living room or reading corner with this delightful armchair.",
-      "price": "220$"
+      "id": "32",
+      "image": "https://s3-alpha-sig.figma.com/img/5a97/55b2/be5d65f3963d2bc282606dc6acd7fe2d?Expires=1690761600&Signature=BJaXxarq3FAt9ctQe2-t0LiimWeCxUjHnQcHgv-kG2c3Y0L9fHK82WN6zFp6sQf0xpNXvOhgIvDzlBjmpHAWNND4lPqnBI8Pk77~0zggUvHh9CeWbsJY3Ae2UUCasCkuX7jN2ieYyjSJFB-qOLsjva3tGjEb3EhDe~S1XoDpHPKJ8rVT4OCSWJqE~eHyD7Hh5shwcICYJ1jFz6j8J5QguyrB6YcdjxaGgITuxSnG1fxjblSu0LB6b86SHcEZ-hCMPUNUVpMH7T4mZUVmzsKFKeXVp0GBhwMK5Me6hyzUSkwIQfa5oPHQG1t-AXEUgqr~m1ziS~sxIRDXGOnQYsetXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "desc": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
+      "price": "140$"
+    },
+    {
+      "id": "19",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
+      "title": "Modern Sideboard",
+      "desc": "Optimize your dining room storage with this modern sideboard. Its sleek design and ample space make it suitable for storing dishes, tableware, and more. Elevate the functionality of your dining area with this contemporary sideboard.",
+      "price": "480$"
+    },
+    {
+      "id": "21",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4ab5417ccf834a93aa9a0b8c0e6a774872bff0b8",
+      "title": "Contemporary Desk",
+      "desc": "Create a stylish and productive workspace with this contemporary desk. Its sleek design and spacious surface make it perfect for studying or working from home. Enhance your productivity and style with this chic desk.",
+      "price": "420$"
     }
   ]
 }

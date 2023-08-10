@@ -16,10 +16,11 @@
 
 .shop__card-image {
   width: 14.9rem;
+  height: 10.5rem;
 }
 
 .shop__card-image img {
-  border-radius: 7.944px;
+  border-radius: 7.9px;
 }
 
 .shop__card-content p {
@@ -55,7 +56,8 @@
   }
 
   .shop__card-image {
-    width: 100%;
+    width: 25.8rem;
+    height: 18.2rem;
   }
 
   .shop__card-content > p {
