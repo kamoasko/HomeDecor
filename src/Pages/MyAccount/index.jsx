@@ -1,10 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./my-account.css";
 import { FaRegUser, FaUser } from "react-icons/fa";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import { useEffect } from "react";
 
 const MyAccount = () => {
   const [icon, setIcon] = useState(false);

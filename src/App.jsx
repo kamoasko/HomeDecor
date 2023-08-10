@@ -15,7 +15,7 @@ import ShoppingCart from "./Pages/ShoppingCart";
 import Checkout from "./Pages/Checkout";
 import AuthLayout from "./Pages/Authentication";
 import AccountForm from "./Components/AccountForm";
-import WishlistCard from "./Components/WishlistCard";
+import Wishlist from "./Components/Wishlist";
 import Login from "./Components/AuthLayout/Login";
 import Password from "./Components/AuthLayout/Password";
 import Verification from "./Components/AuthLayout/verification";
@@ -47,7 +47,7 @@ function App() {
 
           <Route path="account" element={<MyAccount />}>
             <Route path="personal" element={<AccountForm />} />
-            <Route path="wishlist" element={<WishlistCard />} />
+            <Route path="wishlist" element={<Wishlist />} />
           </Route>
           <Route path="shopping-cart" element={<ShoppingCart />} />
           <Route path="checkout" element={<Checkout />} />

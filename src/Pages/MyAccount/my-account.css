@@ -48,6 +48,9 @@
 
 .account__right {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
 }
 
 @media (max-width: 998px) {

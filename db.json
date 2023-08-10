@@ -711,24 +711,5 @@
       "password": "321"
     }
   ],
-  "favorites": [
-    {
-      "id": 6,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dee2eb1391d11c1e5ecc902a0c6592f4c16d3abb",
-      "title": "Cozy Armchair",
-      "price": "220$"
-    },
-    {
-      "id": 1,
-      "image": "https://s3-alpha-sig.figma.com/img/ed65/0672/8605e77828c2dca2b6da5d4d87f66186?Expires=1690761600&Signature=N~Tf2ao6VebaAGPAfSteSJYqM0bRrklGDZCtHUffE93YNB8NV6O2nXlC~5aS3O2Sm2ifWgiPxk4iFKdrWjB-CVrXI9SoycNUuR2tzt9rV0lgn3oSqXByTDGIHX6lzITkgsYzZSoVMWJs41OLFiYxdgNq7osUCe~Mp6NhahphGh92peoAcBeAs~-~OrJW~c8P9hxa5KiQLsPLGYIzpqM~W1SAOvjI5jQmNVvBYTDOOL8pBMjFRIS2RB5z5kv05gQ-S3YhBJXwjkoDHsGRr-LThQhy-MeJvI6xgg~JwUm8gT0Mk-xZ~Txjv4pwTvgTiy9NJnVr9nhGirGEYdWeTsppgg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-      "title": "Grayson Premium Grey Wash Nest of Tables",
-      "price": "140$"
-    },
-    {
-      "id": 2,
-      "image": "https://s3-alpha-sig.figma.com/img/ed65/0672/8605e77828c2dca2b6da5d4d87f66186?Expires=1690761600&Signature=N~Tf2ao6VebaAGPAfSteSJYqM0bRrklGDZCtHUffE93YNB8NV6O2nXlC~5aS3O2Sm2ifWgiPxk4iFKdrWjB-CVrXI9SoycNUuR2tzt9rV0lgn3oSqXByTDGIHX6lzITkgsYzZSoVMWJs41OLFiYxdgNq7osUCe~Mp6NhahphGh92peoAcBeAs~-~OrJW~c8P9hxa5KiQLsPLGYIzpqM~W1SAOvjI5jQmNVvBYTDOOL8pBMjFRIS2RB5z5kv05gQ-S3YhBJXwjkoDHsGRr-LThQhy-MeJvI6xgg~JwUm8gT0Mk-xZ~Txjv4pwTvgTiy9NJnVr9nhGirGEYdWeTsppgg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-      "title": "Premium Wooden Dining Table",
-      "price": "550$"
-    }
-  ]
+  "favorites": []
 }
