@@ -713,10 +713,16 @@
   ],
   "favorites": [
     {
-      "id": 3,
-      "image": "https://s3-alpha-sig.figma.com/img/5a97/55b2/be5d65f3963d2bc282606dc6acd7fe2d?Expires=1690761600&Signature=BJaXxarq3FAt9ctQe2-t0LiimWeCxUjHnQcHgv-kG2c3Y0L9fHK82WN6zFp6sQf0xpNXvOhgIvDzlBjmpHAWNND4lPqnBI8Pk77~0zggUvHh9CeWbsJY3Ae2UUCasCkuX7jN2ieYyjSJFB-qOLsjva3tGjEb3EhDe~S1XoDpHPKJ8rVT4OCSWJqE~eHyD7Hh5shwcICYJ1jFz6j8J5QguyrB6YcdjxaGgITuxSnG1fxjblSu0LB6b86SHcEZ-hCMPUNUVpMH7T4mZUVmzsKFKeXVp0GBhwMK5Me6hyzUSkwIQfa5oPHQG1t-AXEUgqr~m1ziS~sxIRDXGOnQYsetXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-      "title": "Modern Fabric Sofa Set",
-      "price": "750$"
+      "id": 30,
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/872ff807ccb92b737b3915871daaeca675cd8aab",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
+    },
+    {
+      "id": 33,
+      "image": "https://s3-alpha-sig.figma.com/img/eafa/bf40/6cb1d294ca686d29b62862c6f7bde43e?Expires=1690761600&Signature=cqYJ4RibWMxtthl0sAYc8PeIQny~VvlfppGWP33WBsI1IMFzuPkYpG~q9ZX2DAS8Bz1dNpfaEbgIPcPuZCXxJM108Hxb-KT7PCD0hoCTKaHa5jmac3nLM~eXWjJpoZYVrAj0iQfBigll2O2kkgwDHBUTo8KDABuMxYVitaPWoRKi0L07kqD7ruo-WlAW~x1AhOlwKWaX0B2vjFsHmm4nVYaw8BoJYROOGamG0dGQePl1A95HBey9-F6xxX6OtJTnqeO7-CBtBQDNOodCIBixnTjOiuWzFIGL4kKBfLAA8HR7GlrpaYunjdemMvTUAylbMPzYdM6AoIliV52c2yIEPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "price": "140$"
     }
   ]
 }
