@@ -68,6 +68,14 @@ const ShoppingCart = () => {
     calculateTotalCount();
   }, []);
 
+  if (loading) {
+    return <h3>LOADING......</h3>;
+  }
+
+  if (error) {
+    return <h3>{error}</h3>;
+  }
+
   return (
     <>
       <Breadcrumb />
