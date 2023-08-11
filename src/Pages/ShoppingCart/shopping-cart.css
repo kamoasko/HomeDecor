@@ -12,6 +12,11 @@
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
+  width: 91.53rem;
+}
+
+.shopping__content-left > p {
+  max-width: 100%;
 }
 
 .summary {
@@ -56,7 +61,7 @@
   font-weight: 500;
 }
 
-@media (max-width: 1160px) {
+@media (max-width: 1200px) {
   .shopping__content {
     flex-direction: column;
     row-gap: 4rem;
@@ -67,6 +72,7 @@
 @media (max-width: 1024px) {
   .shopping__content-left {
     row-gap: 3rem;
+    width: auto;
   }
 }
 

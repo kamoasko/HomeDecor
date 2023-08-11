@@ -101,7 +101,7 @@ function ProductCard({ productImg, productTitle, productPrice, id }) {
           <img src={productImg} />
         </div>
         <p className="subtitle">{productTitle}</p>
-        <span className="price">{productPrice}</span>
+        <span className="price">{productPrice}$</span>
       </Link>
     </div>
   );

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./product-details.css";
 import Breadcrumb from "../../Components/Breadcrumb";
 import Buttons from "../../Components/Buttons";
-import SecondaryButtons from "../../Components/SecondaryButtons";
 import SectionTitle from "../../Components/SectionTitle";
 import ProductCount from "../../Components/ProductCount";
 import { Outlet, useParams } from "react-router-dom";
@@ -12,6 +11,7 @@ import { BsCart2 } from "react-icons/bs";
 const ProductDetails = () => {
   const { id } = useParams();
   const [products, setProducts] = useState({});
+  const [productCount, setProductCount] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -31,6 +31,10 @@ const ProductDetails = () => {
     }
   };
 
+  const handleCountChange = (count) => {
+    setProductCount(count);
+  };
+
   const addToCart = async () => {
     let newData = {
       id: id,
@@ -38,6 +42,7 @@ const ProductDetails = () => {
       title: products.title,
       desc: products.desc,
       price: products.price,
+      count: productCount,
     };
 
     try {
@@ -99,14 +104,11 @@ const ProductDetails = () => {
           <div className="details__right">
             <p className="details__right-title">{products.title}</p>
             <p className="details__right-info">{products.desc}</p>
-            <div className="details__colors">COLORS</div>
-            <div className="colors flex">
-              <div className="color clr1"></div>
-              <div className="color clr2"></div>
-              <div className="color clr3"></div>
-            </div>
-            <ProductCount />
-            <h3>{products.price}</h3>
+            <ProductCount
+              countProduct={productCount}
+              onCountChange={handleCountChange}
+            />
+            <h3>{products.price}$</h3>
             <div className="details__btns flex">
               <Buttons text="BUY NOW" icon={true} link="/checkout" />
               <button onClick={addToCart} className="btn1 flex">

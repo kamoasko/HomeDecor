@@ -9,7 +9,9 @@ const ShopCard = ({
   productPrice,
   id,
   removeFromCart,
+  count,
 }) => {
+  const [productCount, setProductCount] = useState(count);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -34,6 +36,10 @@ const ShopCard = ({
     }
   };
 
+  const handleCountChange = (newCount) => {
+    setProductCount(newCount);
+  };
+
   if (loading) {
     return <h1>LOADING......</h1>;
   }
@@ -51,13 +57,19 @@ const ShopCard = ({
         <div className="shop__card-image">
           <img src={productImg} />
         </div>
-        <p>{productTitle}</p>
+        <p>
+          {productTitle.length > 13
+            ? productTitle.slice(0, 13).trimEnd() + "..."
+            : productTitle}
+        </p>
       </div>
       <div className="shop__card-details flex">
-        <div className="color clr1"></div>
-        <ProductCount />
+        <ProductCount
+          countProduct={productCount}
+          onCountChange={handleCountChange}
+        />
       </div>
-      <h4>{productPrice}</h4>
+      <h4>{productPrice}$</h4>
     </div>
   );
 };

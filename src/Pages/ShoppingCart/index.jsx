@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 const ShoppingCart = () => {
   const [cartProducts, setCartProducts] = useState([]);
+  const [productCount, setProductCount] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -30,12 +31,41 @@ const ShoppingCart = () => {
     }
   };
 
+  const calculateTotalPrice = () => {
+    const totalPrice = cartProducts.reduce(
+      (acc, product) => acc + parseInt(product.price * product.count),
+      0
+    );
+    return totalPrice;
+  };
+
+  const calculateTotalCount = () => {
+    const apiUrl = "http://localhost:5000/cart?_page=1";
+
+    // Fetch the product data and get the count from the headers
+    fetch(apiUrl)
+      .then((response) => {
+        // Get the total count from the response headers
+        const totalCount = response.headers.get("X-Total-Count");
+        if (totalCount) {
+          // Convert the total count to an integer and set the state
+          const count = parseInt(totalCount, 10);
+          setProductCount(count);
+        }
+      })
+      .catch((error) => {
+        console.error("Error loading product data:", error);
+      });
+  };
+
   const removeFromCart = (id) => {
     setCartProducts((prevCart) => prevCart.filter((cart) => cart.id !== id));
+    calculateTotalCount();
   };
 
   useEffect(() => {
     getCartProduct();
+    calculateTotalCount();
   }, []);
 
   return (
@@ -55,10 +85,11 @@ const ShoppingCart = () => {
                     productTitle={product.title}
                     productPrice={product.price}
                     removeFromCart={removeFromCart}
+                    count={product.count}
                   />
                 ))
               ) : (
-                <p>There is no any product in the shopping cart</p>
+                <p>There is no product in the shopping cart.</p>
               )}
             </div>
             <div className="summary">
@@ -66,11 +97,11 @@ const ShoppingCart = () => {
               <ul className="summary__det">
                 <li className="summary__det-items flex">
                   <span>ITEM COUNT</span>
-                  <span>4</span>
+                  <span>{productCount}</span>
                 </li>
                 <li className="summary__det-items flex">
                   <span>TOTAL PRICE</span>
-                  <span>460$</span>
+                  <span>{calculateTotalPrice()}$</span>
                 </li>
               </ul>
               <div className="summary__btn">
