@@ -4,32 +4,12 @@ import Breadcrumb from "../../Components/Breadcrumb";
 import ShopCard from "../../Components/ShopCard";
 import Buttons from "../../Components/Buttons";
 import { Link } from "react-router-dom";
+import useFetchData from "../../Components/UseFetchData/useFetchData";
 
 const ShoppingCart = () => {
-  const [cartProducts, setCartProducts] = useState([]);
+  const { data: cartProducts, loading, error } = useFetchData("/cart");
   const [productCount, setProductCount] = useState(0);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
   const [totalPrice, setTotalPrice] = useState(0);
-  const getCartProduct = async () => {
-    try {
-      setLoading(true);
-      const res = await fetch("http://localhost:5000/cart");
-
-      if (res.ok) {
-        // Data fetched successfully
-        const data = await res.json();
-        setCartProducts(() => data);
-        setLoading(false);
-      } else {
-        // Handle errors if the request fails
-        setLoading(false);
-        throw new Error("Failed to fetch data!!!");
-      }
-    } catch (error) {
-      setError(error.message);
-    }
-  };
 
   const calculateTotalPrice = async () => {
     const res = await fetch("http://localhost:5000/cart");
@@ -68,10 +48,9 @@ const ShoppingCart = () => {
   };
 
   useEffect(() => {
-    getCartProduct();
     calculateTotalCount();
     calculateTotalPrice();
-  }, []);
+  }, [cartProducts]);
 
   if (loading) {
     return <h3>LOADING......</h3>;

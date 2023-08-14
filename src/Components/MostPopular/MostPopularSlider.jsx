@@ -2,37 +2,18 @@ import React, { useEffect, useRef, useState } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
 import ProductCard from "../ProductCard";
+import useFetchData from "../UseFetchData/useFetchData";
 
 const MostPopularSlider = () => {
   const sliderRef = useRef(null);
-
-  const [populars, setPopulars] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-
-  const getPopulars = async () => {
-    try {
-      const res = await fetch("http://localhost:5000/products");
-      if (res.ok) {
-        const data = await res.json();
-        const popularProducts = data.filter((product) => product.views > 35);
-        setPopulars(popularProducts);
-        setLoading(false);
-      } else {
-        setLoading(false);
-        throw Error("Network error!!!");
-      }
-    } catch (e) {
-      setError(e.message);
-    }
-  };
-
-  useEffect(() => {
-    getPopulars();
-  }, []);
+  const {
+    data: populars,
+    loading,
+    error,
+  } = useFetchData("/products?views_gte=35");
 
   if (loading) {
-    return <h1>LOADING......</h1>;
+    return <h3>LOADING......</h3>;
   }
 
   if (error) {
