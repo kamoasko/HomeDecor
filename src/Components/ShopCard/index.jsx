@@ -10,6 +10,7 @@ const ShopCard = ({
   id,
   removeFromCart,
   count,
+  calculateTotalPrice,
 }) => {
   const [productCount, setProductCount] = useState(count);
   const [loading, setLoading] = useState(false);
@@ -67,9 +68,10 @@ const ShopCard = ({
         <ProductCount
           countProduct={productCount}
           onCountChange={handleCountChange}
+          calculateTotalPrice={calculateTotalPrice}
         />
       </div>
-      <h4>{productPrice}$</h4>
+      <h4>{productPrice * productCount}$</h4>
     </div>
   );
 };

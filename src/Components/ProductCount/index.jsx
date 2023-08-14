@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./product-count.css";
 
-const ProductCount = ({ onCountChange, countProduct }) => {
+const ProductCount = ({ onCountChange, countProduct, calculateTotalPrice }) => {
   let [count, setCount] = useState(countProduct);
 
   const handleDecrease = () => {
@@ -9,6 +9,7 @@ const ProductCount = ({ onCountChange, countProduct }) => {
       const newCount = count - 1;
       setCount(newCount);
       onCountChange(newCount); // Notify the parent component about the count change
+      calculateTotalPrice(); // Calculate and update the total price
     }
   };
 
@@ -16,6 +17,7 @@ const ProductCount = ({ onCountChange, countProduct }) => {
     const newCount = count + 1;
     setCount(newCount);
     onCountChange(newCount); // Notify the parent component about the count change
+    calculateTotalPrice(); // Calculate and update the total price
   };
 
   return (

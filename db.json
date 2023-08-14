@@ -739,22 +739,6 @@
       "desc": "Complete your bedroom with this elegant bedside table. Its classic design and ample storage make it a perfect addition to any bedroom decor. Keep your essentials within reach and add a touch of sophistication to your sleeping space.",
       "price": "300",
       "count": 4
-    },
-    {
-      "id": "17",
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
-      "title": "Modern Bar Stool",
-      "desc": "Upgrade your kitchen counter or bar with these modern bar stools. Their sleek design and sturdy construction provide both style and functionality. Enjoy meals and gatherings in style with these chic bar stools.",
-      "price": "180",
-      "count": 7
-    },
-    {
-      "id": "6",
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/dee2eb1391d11c1e5ecc902a0c6592f4c16d3abb",
-      "title": "Cozy Armchair",
-      "desc": "Indulge in comfort and relaxation with this cozy armchair. Its plush cushions and ergonomic design make it the perfect spot for unwinding after a long day. Add a touch of coziness to your living room or reading corner with this delightful armchair.",
-      "price": "220",
-      "count": 1
     }
   ]
 }

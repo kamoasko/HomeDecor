@@ -10,6 +10,7 @@ const ShoppingCart = () => {
   const [productCount, setProductCount] = useState(0);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const getCartProduct = async () => {
     try {
@@ -36,7 +37,7 @@ const ShoppingCart = () => {
       (acc, product) => acc + parseInt(product.price * product.count),
       0
     );
-    return totalPrice;
+    setTotalPrice(totalPrice);
   };
 
   const calculateTotalCount = () => {
@@ -66,6 +67,7 @@ const ShoppingCart = () => {
   useEffect(() => {
     getCartProduct();
     calculateTotalCount();
+    calculateTotalPrice();
   }, []);
 
   if (loading) {
@@ -94,6 +96,7 @@ const ShoppingCart = () => {
                     productPrice={product.price}
                     removeFromCart={removeFromCart}
                     count={product.count}
+                    calculateTotalPrice={calculateTotalPrice}
                   />
                 ))
               ) : (
@@ -109,7 +112,7 @@ const ShoppingCart = () => {
                 </li>
                 <li className="summary__det-items flex">
                   <span>TOTAL PRICE</span>
-                  <span>{calculateTotalPrice()}$</span>
+                  <span>{totalPrice}$</span>
                 </li>
               </ul>
               <div className="summary__btn">
