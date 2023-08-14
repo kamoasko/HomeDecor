@@ -15,14 +15,15 @@ const MostPopularSlider = () => {
       const res = await fetch("http://localhost:5000/products");
       if (res.ok) {
         const data = await res.json();
-        setPopulars(() => data.slice(4, 12));
+        const popularProducts = data.filter((product) => product.views > 35);
+        setPopulars(popularProducts);
         setLoading(false);
       } else {
         setLoading(false);
         throw Error("Network error!!!");
       }
     } catch (e) {
-      setError(() => e.message);
+      setError(e.message);
     }
   };
 
