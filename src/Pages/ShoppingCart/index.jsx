@@ -11,7 +11,6 @@ const ShoppingCart = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [totalPrice, setTotalPrice] = useState(0);
-
   const getCartProduct = async () => {
     try {
       setLoading(true);
@@ -32,12 +31,16 @@ const ShoppingCart = () => {
     }
   };
 
-  const calculateTotalPrice = () => {
-    const totalPrice = cartProducts.reduce(
-      (acc, product) => acc + parseInt(product.price * product.count),
-      0
-    );
-    setTotalPrice(totalPrice);
+  const calculateTotalPrice = async () => {
+    const res = await fetch("http://localhost:5000/cart");
+    if (res.ok) {
+      const data = await res.json();
+      const totalPrice = data.reduce(
+        (acc, product) => acc + parseInt(product.price * product.count),
+        0
+      );
+      setTotalPrice(totalPrice);
+    }
   };
 
   const calculateTotalCount = () => {

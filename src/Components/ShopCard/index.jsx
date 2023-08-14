@@ -39,6 +39,20 @@ const ShopCard = ({
 
   const handleCountChange = (newCount) => {
     setProductCount(newCount);
+    fetch("http://localhost:5000/cart/" + id, {
+      method: "PUT",
+      body: JSON.stringify({
+        id: id,
+        title: productTitle,
+        image: productImg,
+        price: productPrice,
+        count: newCount,
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    calculateTotalPrice();
   };
 
   if (loading) {
@@ -68,7 +82,6 @@ const ShopCard = ({
         <ProductCount
           countProduct={productCount}
           onCountChange={handleCountChange}
-          calculateTotalPrice={calculateTotalPrice}
         />
       </div>
       <h4>{productPrice * productCount}$</h4>

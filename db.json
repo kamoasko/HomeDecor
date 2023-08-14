@@ -733,12 +733,18 @@
   ],
   "cart": [
     {
-      "id": "4",
-      "image": "https://s3-alpha-sig.figma.com/img/eafa/bf40/6cb1d294ca686d29b62862c6f7bde43e?Expires=1690761600&Signature=cqYJ4RibWMxtthl0sAYc8PeIQny~VvlfppGWP33WBsI1IMFzuPkYpG~q9ZX2DAS8Bz1dNpfaEbgIPcPuZCXxJM108Hxb-KT7PCD0hoCTKaHa5jmac3nLM~eXWjJpoZYVrAj0iQfBigll2O2kkgwDHBUTo8KDABuMxYVitaPWoRKi0L07kqD7ruo-WlAW~x1AhOlwKWaX0B2vjFsHmm4nVYaw8BoJYROOGamG0dGQePl1A95HBey9-F6xxX6OtJTnqeO7-CBtBQDNOodCIBixnTjOiuWzFIGL4kKBfLAA8HR7GlrpaYunjdemMvTUAylbMPzYdM6AoIliV52c2yIEPw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
-      "title": "Elegant Bedside Table",
-      "desc": "Complete your bedroom with this elegant bedside table. Its classic design and ample storage make it a perfect addition to any bedroom decor. Keep your essentials within reach and add a touch of sophistication to your sleeping space.",
-      "price": "300",
-      "count": 4
+      "id": "9",
+      "title": "Elegant Dining Chair",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
+      "price": "120",
+      "count": 6
+    },
+    {
+      "id": "12",
+      "title": "Elegant Dressing Table",
+      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
+      "price": "480",
+      "count": 5
     }
   ]
 }
