@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./wishlist-card.css";
 import { AiFillHeart } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const WishlistCard = ({
   productImg,
@@ -60,15 +61,15 @@ const WishlistCard = ({
 
   return (
     <div className="wishlist">
-      <div className="wishlist__content">
+      <Link to={`/products/${id}`} className="wishlist__content">
         <div className="wishlist__image">
           <img src={productImg} />
         </div>
         <div className="wishlist__details">
           <p className="subtitle">{productTitle}</p>
-          <span className="price">{productPrice}</span>
+          <span className="price">{productPrice}$</span>
         </div>
-      </div>
+      </Link>
       <button className="wishlist__favorite flex">
         {favorite && <AiFillHeart onClick={deleteFavorite} />}
       </button>
