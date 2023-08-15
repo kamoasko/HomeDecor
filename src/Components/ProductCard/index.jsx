@@ -89,12 +89,11 @@ function ProductCard({ productImg, productTitle, productPrice, id }) {
 
   return (
     <div className="product__main">
-      <button className="favorite flex">
-        {favorite ? (
-          <AiFillHeart onClick={deleteFavorite} />
-        ) : (
-          <AiOutlineHeart onClick={addFavorite} />
-        )}
+      <button
+        onClick={favorite ? deleteFavorite : addFavorite}
+        className="favorite flex"
+      >
+        {favorite ? <AiFillHeart /> : <AiOutlineHeart />}
       </button>
       <Link className="products__card" to={`/products/${id}`}>
         <div className="products__card-image">
