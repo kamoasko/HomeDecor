@@ -1,5 +1,3 @@
-// useFetchData.js
-
 import { useState, useEffect } from "react";
 import { fetchData } from "./api";
 

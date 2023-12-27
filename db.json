@@ -709,6 +709,18 @@
       "fullname": "test testli",
       "email": "test@mail.ru",
       "password": "321"
+    },
+    {
+      "id": 1692101922443,
+      "fullname": "",
+      "email": "",
+      "password": ""
+    },
+    {
+      "id": 1692101953503,
+      "fullname": "     ",
+      "email": "",
+      "password": "         "
     }
   ],
   "favorites": [
@@ -731,20 +743,5 @@
       "price": "220"
     }
   ],
-  "cart": [
-    {
-      "id": "9",
-      "title": "Elegant Dining Chair",
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/9d7395874c2910d000ef86b5e1bfb6b0575053b1",
-      "price": "120",
-      "count": 7
-    },
-    {
-      "id": "12",
-      "title": "Elegant Dressing Table",
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
-      "price": "480",
-      "count": 5
-    }
-  ]
+  "cart": []
 }
