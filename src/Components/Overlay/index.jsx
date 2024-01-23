@@ -3,7 +3,7 @@ import "./overlay.css";
 import { useLockBodyScroll } from "@uidotdev/usehooks";
 
 function Overlay({ children, isModal }) {
-  useLockBodyScroll();
+  // useLockBodyScroll();
   const overlayClass = isModal ? "flex overlay" : "overlay";
 
   return <div className={overlayClass}>{children}</div>;

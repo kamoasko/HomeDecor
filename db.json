@@ -731,12 +731,6 @@
   ],
   "favorites": [
     {
-      "id": 16,
-      "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/4d980a2b4cf40a0ed69c10e4829a9d775c00304d",
-      "title": "Classic Armchair",
-      "price": "420"
-    },
-    {
       "id": 20,
       "image": "https://www.figma.com/file/r9LDbjRUV4V3zlUFE3gpO3/image/a40b545f582eb68594e429e0750c546766a6e365",
       "title": "Versatile Storage Bench",
@@ -751,6 +745,14 @@
       "desc": "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
       "price": "140",
       "count": 3
+    },
+    {
+      "id": "22",
+      "image": "https://s3-alpha-sig.figma.com/img/5a97/55b2/be5d65f3963d2bc282606dc6acd7fe2d?Expires=1690761600&Signature=BJaXxarq3FAt9ctQe2-t0LiimWeCxUjHnQcHgv-kG2c3Y0L9fHK82WN6zFp6sQf0xpNXvOhgIvDzlBjmpHAWNND4lPqnBI8Pk77~0zggUvHh9CeWbsJY3Ae2UUCasCkuX7jN2ieYyjSJFB-qOLsjva3tGjEb3EhDe~S1XoDpHPKJ8rVT4OCSWJqE~eHyD7Hh5shwcICYJ1jFz6j8J5QguyrB6YcdjxaGgITuxSnG1fxjblSu0LB6b86SHcEZ-hCMPUNUVpMH7T4mZUVmzsKFKeXVp0GBhwMK5Me6hyzUSkwIQfa5oPHQG1t-AXEUgqr~m1ziS~sxIRDXGOnQYsetXw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4",
+      "title": "Grayson Premium Grey Wash Nest of Tables",
+      "desc": "22 Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.",
+      "price": "140",
+      "count": 4
     }
   ]
 }

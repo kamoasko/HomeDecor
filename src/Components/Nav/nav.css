@@ -1,3 +1,7 @@
+body:has(.nav) {
+  overflow: hidden;
+}
+
 .nav {
   margin-top: 2.7rem;
 }
